@@ -9,7 +9,7 @@
     
     <title>
         
-            我的第一篇博客 |
+            我的第一篇博客（密码：123456） |
         
         Keep Theme
     </title>
@@ -290,27 +290,34 @@
 
                     
 <div class="fade-in-down-animation">
-    <div class="post-page-container border-box">
+    <div class="post-page-container border-box encrypt">
         <div class="post-content-container border-box">
             
-
-            <div class="post-content-bottom border-box">
-                
-                    <div class="post-title">
-                        我的第一篇博客
+                <div class="post-content-top border-box"
+                     style="height: 120px"
+                >
+                    <div class="cover-post-title">
+                        我的第一篇博客（密码：123456）
                     </div>
+                    <img class="post-cover" src="/images/post-cover-img.png"
+                         onerror="this.style.display='none'"
+                    >
+                </div>
+            
+
+            <div class="post-content-bottom border-box has-cover">
                 
 
                 
                     <div class="post-header border-box">
                         
                             <div class="avatar-box border-box">
-                                <img src="/images/avatar.svg">
+                                <img src="https://xpoet.cn/images/avatar.png">
                             </div>
                         
                         <div class="info-box">
                             <div class="author border-box">
-                                <span class="name">Keep Team</span>
+                                <span class="name">zoyo</span>
                                 
                                     <span class="author-badge">炼气</span>
                                 
@@ -331,7 +338,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Fri Jan 03 2025 14:44:34 GMT+0800">2025-01-03 14:44:34</span>
+                    <span class="datetime" data-updated="Sat Jan 04 2025 10:54:13 GMT+0800">2025-01-04 10:54:13</span>
                 </span>
             
         
@@ -340,7 +347,7 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/%E7%B1%BB%E5%88%AB1/">类别1</a></li>
+                            <li class="category-item"><a href="/categories/%E5%A8%B1%E4%B9%90/">娱乐</a></li>
                         
                     
                 </ul>
@@ -351,10 +358,10 @@
             <span class="post-tag meta-info-item border-box">
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%A0%87%E7%AD%BE1/">标签1</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%A0%87%E7%AD%BE2/">标签2</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%A8%B1%E4%B9%90/">娱乐</a></li>
                         
                     
                 </ul>
@@ -375,11 +382,19 @@
                     </div>
                 
 
-                <div class="post-content keep-markdown-body ">
+                <div class="post-content keep-markdown-body code-block-unshrink">
                     
 
                     
-                         <h1 id="这里开始是文章的内容"><a href="#这里开始是文章的内容" class="headerlink" title="这里开始是文章的内容"></a>这里开始是文章的内容</h1>
+                        <div class="post-encrypt-box border-box"
+                             data-secret="b4b6791e6ede3a5ebfd115ad5493a0c4f5014f9d984b02ab6f9a2774c65d564b"
+                             data-iv="2fbb60566ed2417b439a1e5561abde83"
+                             data-ep="edf9c864e7add5404431510bf73efcc5"
+                             data-content="ec0493b04bae1afb9dd5df2ebf83a9ce94b9bd41bf636563b7b4695eee5bab8ca326458989f4c9939a990a50d59fe814a8ee5adecd9279fa60e8c75149d847d8e8c16cb30d2d6f62bc73ef4fe40e91068e40b4fd1c8101f55f82faab74d60a3a024521f3f830929f77b0412836e2fb08ed0bcd4a76247f5090a374b54f0f48fd399e8dd7ff1eb55d779333d1b6c439d71ce8ceeaf31fd3587a314a4d245941f57380238ee92ef868778685587af7dd7362ca67056541a56f8de39d923f6e7b9037afb171c879262202eb9554f0a34399ad33225ccbd04eb851667f1054d7b615f00c25f0aa07e1f1145c8d15db05980ffa8e6aebe6f4b39d7b39e74e829f0942eecf955fa5223ff0686f3e592cd4e262"
+                        >
+                            <input type="password" class="password-input border-box" placeholder="请输入密码...">
+                        </div>
+                        <div class="post"></div>
                     
                 </div>
 
@@ -391,11 +406,11 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%A0%87%E7%AD%BE1/">标签1</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%A0%87%E7%AD%BE2/">标签2</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%A8%B1%E4%B9%90/">娱乐</a>
                                     </li>
                                 
                             </ul>
@@ -452,7 +467,7 @@
             
                 <span class="count-item border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">10</span>
+                    <span class="item-value border-box word">16</span>
                 </span>
             
 
@@ -474,6 +489,13 @@
             <div class="post-tools-container border-box">
     <ul class="post-tools-list border-box">
         <!-- PC encrypt again -->
+        
+            <li class="status-item flex-center post-lock border-box"
+                data-tooltip-content="重新加密"
+            >
+                <i class="fa-solid fa-lock"></i>
+                <i class="fa-solid fa-lock-open"></i>
+            </li>
         
 
         <!-- PC TOC show toggle -->
