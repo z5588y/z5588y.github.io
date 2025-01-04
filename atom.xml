@@ -6,7 +6,7 @@
   <link href="https://z5588y.github.io/atom.xml" rel="self"/>
   
   <link href="https://z5588y.github.io/"/>
-  <updated>2025-01-04T02:54:13.436Z</updated>
+  <updated>2025-01-04T03:04:20.364Z</updated>
   <id>https://z5588y.github.io/</id>
   
   <author>
@@ -21,14 +21,15 @@
     <link href="https://z5588y.github.io/posts/undefined.html"/>
     <id>https://z5588y.github.io/posts/undefined.html</id>
     <published>2025-01-03T05:23:50.000Z</published>
-    <updated>2025-01-04T02:54:13.436Z</updated>
+    <updated>2025-01-04T03:04:20.364Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="又菜又爱玩的小菜鸡"><a href="#又菜又爱玩的小菜鸡" class="headerlink" title="又菜又爱玩的小菜鸡"></a>又菜又爱玩的小菜鸡</h1><p>(&#96;&#96;&#96;hexo clean<br>hexo generate<br>hexo deploy</p><pre><code class=")"></code></pre>]]></content>
+    <content type="html"><![CDATA[<h1 id="又菜又爱玩的小菜鸡"><a href="#又菜又爱玩的小菜鸡" class="headerlink" title="又菜又爱玩的小菜鸡"></a>又菜又爱玩的小菜鸡</h1><pre><code class="bash">hexo cleanhexo generatehexo deploy</code></pre>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;又菜又爱玩的小菜鸡&quot;&gt;&lt;a href=&quot;#又菜又爱玩的小菜鸡&quot; class=&quot;headerlink&quot; title=&quot;又菜又爱玩的小菜鸡&quot;&gt;&lt;/a&gt;又菜又爱玩的小菜鸡&lt;/h1&gt;&lt;p&gt;(&amp;#96;&amp;#96;&amp;#96;hexo clean&lt;br&gt;hexo generat</summary>
+    <summary type="html">&lt;h1 id=&quot;又菜又爱玩的小菜鸡&quot;&gt;&lt;a href=&quot;#又菜又爱玩的小菜鸡&quot; class=&quot;headerlink&quot; title=&quot;又菜又爱玩的小菜鸡&quot;&gt;&lt;/a&gt;又菜又爱玩的小菜鸡&lt;/h1&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;hexo clean
+hexo gener</summary>
       
     
     
