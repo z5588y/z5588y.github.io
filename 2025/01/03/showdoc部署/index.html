@@ -506,7 +506,7 @@ mjx-container[display="true"] + br {
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Tue Jan 07 2025 18:05:13 GMT+0800">2025-01-07 18:05:13</span>
+                    <span class="datetime" data-updated="Tue Jan 07 2025 18:07:09 GMT+0800">2025-01-07 18:07:09</span>
                 </span>
             
         
@@ -573,18 +573,18 @@ mjx-container[display="true"] + br {
                     
                          <h1 id="showdoc部署"><a class="markdownIt-Anchor" href="#showdoc部署"></a> showdoc部署</h1>
 <h2 id="部署方式如下选择其一就可"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可"></a> <strong>部署方式如下，选择其一就可。</strong></h2>
-<div class="keep-tabs" id="keep-tabs-1736244331821">
-            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1736244331821-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1736244331821-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1736244331821-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -d </span><br><span class="line">--name showdoc </span><br><span class="line">--user=root </span><br><span class="line">--privileged=true </span><br><span class="line">-p 5099:80  </span><br><span class="line">--restart always </span><br><span class="line">-v /volume1/docker/showdoc:/var/www/html/ </span><br><span class="line">star7th/showdoc</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1736244331821-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">version: '3.8'</span><br><span class="line">services:</span><br><span class="line">  showdoc:</span><br><span class="line">    image: star7th/showdoc</span><br><span class="line">    container_name: showdoc</span><br><span class="line">    user: root</span><br><span class="line">    privileged: true</span><br><span class="line">    ports:</span><br><span class="line">      - "5099:80"</span><br><span class="line">    restart: always</span><br><span class="line">    volumes:</span><br><span class="line">      - /volume1/docker/showdoc:/var/www/html/</span><br></pre></td></tr></table></figure></div></div>
+<div class="keep-tabs" id="keep-tabs-1736244448640">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1736244448640-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1736244448640-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1736244448640-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -d </span><br><span class="line">--name showdoc </span><br><span class="line">--user=root </span><br><span class="line">--privileged=true </span><br><span class="line">-p 5099:80  </span><br><span class="line">--restart always </span><br><span class="line">-v /volume1/docker/showdoc:/var/www/html/ </span><br><span class="line">star7th/showdoc</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1736244448640-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">version: '3.8'</span><br><span class="line">services:</span><br><span class="line">  showdoc:</span><br><span class="line">    image: star7th/showdoc</span><br><span class="line">    container_name: showdoc</span><br><span class="line">    user: root</span><br><span class="line">    privileged: true</span><br><span class="line">    ports:</span><br><span class="line">      - "5099:80"</span><br><span class="line">    restart: always</span><br><span class="line">    volumes:</span><br><span class="line">      - /volume1/docker/showdoc:/var/www/html/</span><br></pre></td></tr></table></figure></div></div>
           </div>
 <h2 id="指令修改部分如下"><a class="markdownIt-Anchor" href="#指令修改部分如下"></a> <strong>指令修改部分如下</strong></h2>
 <blockquote>
 <ul>
-<li><strong><code>5090</code> 可以改成自己想要的端口</strong></li>
+<li><strong><code>5099</code> 可以改成自己想要的端口</strong></li>
 <li><strong><code>/volume1/docker/showdoc</code> 改成自己想要映射的文件夹</strong></li>
 </ul>
 </blockquote>
 <h3 id="初始化"><a class="markdownIt-Anchor" href="#初始化"></a> 初始化</h3>
-<p><strong>部署好后 <a class="link" target="_blank" rel="noopener" href="http://localhost:5090">http://localhost:5090<i class="fas fa-external-link-alt"></i></a> 访问</strong></p>
+<p><strong>部署好后 <a class="link" target="_blank" rel="noopener" href="http://localhost:5099">http://localhost:5099<i class="fas fa-external-link-alt"></i></a> 访问</strong></p>
 
                     
                 </div>
