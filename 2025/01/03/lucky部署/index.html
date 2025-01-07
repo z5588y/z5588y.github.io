@@ -506,7 +506,7 @@ mjx-container[display="true"] + br {
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Tue Jan 07 2025 20:45:46 GMT+0800">2025-01-07 20:45:46</span>
+                    <span class="datetime" data-updated="Tue Jan 07 2025 21:06:29 GMT+0800">2025-01-07 21:06:29</span>
                 </span>
             
         
@@ -573,8 +573,8 @@ mjx-container[display="true"] + br {
                     
                          <h1 id="lucky部署"><a class="markdownIt-Anchor" href="#lucky部署"></a> lucky部署</h1>
 <h2 id="部署方式如下选择其一就可"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可"></a> <strong>部署方式如下，选择其一就可。</strong></h2>
-<div class="keep-tabs" id="keep-tabs-1736253985841">
-            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1736253985841-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1736253985841-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1736253985841-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  --name lucky \</span><br><span class="line">  --network host \</span><br><span class="line">  --restart always \</span><br><span class="line">  -v /volume1/docker/lucky:/goodluck \</span><br><span class="line">  -d \</span><br><span class="line">  gdy666/lucky:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1736253985841-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">version: '3'</span><br><span class="line">services:</span><br><span class="line">  lucky:</span><br><span class="line">    image: gdy666/lucky:latest</span><br><span class="line">    container_name: lucky</span><br><span class="line">    ports:</span><br><span class="line">      - "16601:16601"</span><br><span class="line">    volumes:</span><br><span class="line">      - /volume1/docker/lucky:/goodluck</span><br><span class="line">    restart: always</span><br><span class="line">    network_mode: host</span><br></pre></td></tr></table></figure></div></div>
+<div class="keep-tabs" id="keep-tabs-1736255203242">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1736255203242-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1736255203242-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1736255203242-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  --name lucky \</span><br><span class="line">  --network host \</span><br><span class="line">  --restart always \</span><br><span class="line">  -v /volume1/docker/lucky:/goodluck \</span><br><span class="line">  -d \</span><br><span class="line">  gdy666/lucky:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1736255203242-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">version: '3'</span><br><span class="line">services:</span><br><span class="line">  lucky:</span><br><span class="line">    image: gdy666/lucky:latest</span><br><span class="line">    container_name: lucky</span><br><span class="line">    ports:</span><br><span class="line">      - "16601:16601"</span><br><span class="line">    volumes:</span><br><span class="line">      - /volume1/docker/lucky:/goodluck</span><br><span class="line">    restart: always</span><br><span class="line">    network_mode: host</span><br></pre></td></tr></table></figure></div></div>
           </div>
 <h2 id="指令修改部分如下"><a class="markdownIt-Anchor" href="#指令修改部分如下"></a> <strong>指令修改部分如下</strong></h2>
 <blockquote>
@@ -589,7 +589,7 @@ mjx-container[display="true"] + br {
 <strong>默认密码：<code>666</code></strong></p>
 </blockquote>
 <h2 id="进入设置后可以更改账户及密码"><a class="markdownIt-Anchor" href="#进入设置后可以更改账户及密码"></a> 进入设置后可以更改账户及密码</h2>
-<p><img lazyload="" alt="alt text" data-src="image.png"></p>
+<p><img lazyload="" alt="lucky设置" data-src="https://github.com/z5588y/picx-images-hosting/raw/master/lucky%E8%AE%BE%E7%BD%AE.7w6wju33bl.webp"></p>
 <blockquote>
 <p><strong>以上三步需要操作，防止远程无法访问！！！</strong></p>
 </blockquote>
@@ -640,14 +640,14 @@ mjx-container[display="true"] + br {
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2025/01/03/OnaNav/"
-                                   title="OneNav"
+                                   href="/2025/01/03/docker%E9%83%A8%E7%BD%B2%E6%A0%87%E6%9C%AC/"
+                                   title="docker部署标本"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">OneNav</span>
+                                        <span class="post-nav-title-item text-ellipsis">docker部署标本</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
