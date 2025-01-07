@@ -506,7 +506,7 @@ mjx-container[display="true"] + br {
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Tue Jan 07 2025 21:33:21 GMT+0800">2025-01-07 21:33:21</span>
+                    <span class="datetime" data-updated="Tue Jan 07 2025 21:43:59 GMT+0800">2025-01-07 21:43:59</span>
                 </span>
             
         
@@ -542,7 +542,7 @@ mjx-container[display="true"] + br {
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>212 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>245 字</span>
             </span>
         
         
@@ -567,28 +567,26 @@ mjx-container[display="true"] + br {
                     
                          <h1 id="qbittorrent"><a class="markdownIt-Anchor" href="#qbittorrent"></a> qbittorrent</h1>
 <h2 id="部署方式如下选择其一就可"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可"></a> <strong>部署方式如下，选择其一就可。</strong></h2>
-<div class="keep-tabs" id="keep-tabs-1736256832888">
-            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1736256832888-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1736256832888-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1736256832888-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name=qbittorrent \</span><br><span class="line">  -e PUID=1000 \</span><br><span class="line">  -e PGID=1000 \</span><br><span class="line">  -e TZ=Etc/UTC \</span><br><span class="line">  -e WEBUI_PORT=8080 \</span><br><span class="line">  -e TORRENTING_PORT=6881 \</span><br><span class="line">  -p 8080:8080 \</span><br><span class="line">  -p 6881:6881 \</span><br><span class="line">  -p 6881:6881/udp \</span><br><span class="line">  -v /path/to/qbittorrent/appdata:/config \</span><br><span class="line">  -v /path/to/downloads:/downloads `#optional` \</span><br><span class="line">  --restart unless-stopped \</span><br><span class="line">  lscr.io/linuxserver/qbittorrent:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1736256832888-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">services:</span><br><span class="line">  qbittorrent:</span><br><span class="line">    image: lscr.io/linuxserver/qbittorrent:latest</span><br><span class="line">    container_name: qbittorrent</span><br><span class="line">    environment:</span><br><span class="line">      - PUID=1000</span><br><span class="line">      - PGID=1000</span><br><span class="line">      - TZ=Etc/UTC</span><br><span class="line">      - WEBUI_PORT=8080</span><br><span class="line">      - TORRENTING_PORT=6881</span><br><span class="line">    volumes:</span><br><span class="line">      - /path/to/qbittorrent/appdata:/config</span><br><span class="line">      - /path/to/downloads:/downloads #optional</span><br><span class="line">    ports:</span><br><span class="line">      - 8080:8080</span><br><span class="line">      - 6881:6881</span><br><span class="line">      - 6881:6881/udp</span><br><span class="line">    restart: unless-stopped</span><br></pre></td></tr></table></figure></div></div>
+<div class="keep-tabs" id="keep-tabs-1736257471362">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1736257471362-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1736257471362-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1736257471362-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name=qbittorrent \</span><br><span class="line">  -e PUID=1000 \</span><br><span class="line">  -e PGID=1000 \</span><br><span class="line">  -e TZ=Etc/UTC \</span><br><span class="line">  -e WEBUI_PORT=7070 \</span><br><span class="line">  -e TORRENTING_PORT=6881 \</span><br><span class="line">  -p 7070:8080 \</span><br><span class="line">  -p 6881:6881 \</span><br><span class="line">  -p 6881:6881/udp \</span><br><span class="line">  -v /path/to/qbittorrent/appdata:/config \</span><br><span class="line">  -v /path/to/downloads:/downloads `#optional` \</span><br><span class="line">  --restart unless-stopped \</span><br><span class="line">  lscr.io/linuxserver/qbittorrent:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1736257471362-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">services:</span><br><span class="line">  qbittorrent:</span><br><span class="line">    image: lscr.io/linuxserver/qbittorrent:latest</span><br><span class="line">    container_name: qbittorrent</span><br><span class="line">    environment:</span><br><span class="line">      - PUID=1000</span><br><span class="line">      - PGID=1000</span><br><span class="line">      - TZ=Etc/UTC</span><br><span class="line">      - WEBUI_PORT=7070</span><br><span class="line">      - TORRENTING_PORT=6881</span><br><span class="line">    volumes:</span><br><span class="line">      - /path/to/qbittorrent/appdata:/config</span><br><span class="line">      - /path/to/downloads:/downloads #optional</span><br><span class="line">    ports:</span><br><span class="line">      - 7070:8080</span><br><span class="line">      - 6881:6881</span><br><span class="line">      - 6881:6881/udp</span><br><span class="line">    restart: unless-stopped</span><br></pre></td></tr></table></figure></div></div>
           </div>
-<div class="keep-note primary"><p><strong><code>WEBUI_PORT=8080</code></strong><br>
-<strong><code>-p 6881:6881</code></strong></p>
-<p>以上端口是WEBUI的访问端口，要保持一致</p>
+<div class="keep-note primary"><p><strong><code>WEBUI_PORT=7070</code></strong><br>
+<strong><code>-p 7070:8080</code></strong></p>
+<p>以上<code>7070</code>端口可以自定义，但是WEBUI的访问端口要保持跟自己定义的端口一直！</p>
 </div>
-<div class="keep-note danger"><p><strong><code>/path/to/qbittorrent/appdata</code>  映射自己的文件夹路径</strong><br>
-<strong><code>/path/to/downloads</code>  映射自己的文件夹路径</strong></p>
+<div class="keep-note danger"><p><strong><code>/path/to/qbittorrent/appdata</code>  应用文件，映射自己的文件夹路径</strong><br>
+<strong><code>/path/to/downloads</code>  下载的目录，映射自己的文件夹路径</strong></p>
 </div>
-<h2 id="安装完毕后访问httpip5001完成初始化操作"><a class="markdownIt-Anchor" href="#安装完毕后访问httpip5001完成初始化操作"></a> 安装完毕后访问<code>http://IP:5001</code>完成初始化操作！</h2>
+<h2 id="安装完毕后访问httpip7070操作"><a class="markdownIt-Anchor" href="#安装完毕后访问httpip7070操作"></a> 安装完毕后访问<code>http://IP:7070</code>操作！</h2>
+<ul>
+<li><strong>用户名<code>admin</code></strong></li>
+<li><strong>密码 <code>随机的看运行日记</code></strong></li>
+</ul>
 <blockquote>
-<p><strong>WEB访问不了解决方式：</strong></p>
-</blockquote>
-<blockquote>
-<p><strong>进入qbittorrent.conf文件中添加/修改两项参数</strong></p>
-</blockquote>
-<blockquote>
-<p><strong>WebUI\HostHeaderValidation=false</strong></p>
-</blockquote>
-<blockquote>
-<p><strong>WebUI\HTTPS\Enabled=false</strong></p>
+<p><strong>WEB访问不了解决方式：</strong><br>
+<strong>进入qbittorrent.conf文件中添加/修改两项参数</strong><br>
+<strong>WebUI\HostHeaderValidation=false</strong><br>
+<strong>WebUI\HTTPS\Enabled=false</strong></p>
 </blockquote>
 
                     
@@ -678,7 +676,7 @@ mjx-container[display="true"] + br {
             <div class="pc-post-toc left-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#qbittorrent"><span class="nav-number">1.</span> <span class="nav-text"> qbittorrent</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%AE%8C%E6%AF%95%E5%90%8E%E8%AE%BF%E9%97%AEhttpip5001%E5%AE%8C%E6%88%90%E5%88%9D%E5%A7%8B%E5%8C%96%E6%93%8D%E4%BD%9C"><span class="nav-number">1.2.</span> <span class="nav-text"> 安装完毕后访问http:&#x2F;&#x2F;IP:5001完成初始化操作！</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#qbittorrent"><span class="nav-number">1.</span> <span class="nav-text"> qbittorrent</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%AE%8C%E6%AF%95%E5%90%8E%E8%AE%BF%E9%97%AEhttpip7070%E6%93%8D%E4%BD%9C"><span class="nav-number">1.2.</span> <span class="nav-text"> 安装完毕后访问http:&#x2F;&#x2F;IP:7070操作！</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -872,7 +870,7 @@ mjx-container[display="true"] + br {
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#qbittorrent"><span class="nav-number">1.</span> <span class="nav-text"> qbittorrent</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%AE%8C%E6%AF%95%E5%90%8E%E8%AE%BF%E9%97%AEhttpip5001%E5%AE%8C%E6%88%90%E5%88%9D%E5%A7%8B%E5%8C%96%E6%93%8D%E4%BD%9C"><span class="nav-number">1.2.</span> <span class="nav-text"> 安装完毕后访问http:&#x2F;&#x2F;IP:5001完成初始化操作！</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#qbittorrent"><span class="nav-number">1.</span> <span class="nav-text"> qbittorrent</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%AE%8C%E6%AF%95%E5%90%8E%E8%AE%BF%E9%97%AEhttpip7070%E6%93%8D%E4%BD%9C"><span class="nav-number">1.2.</span> <span class="nav-text"> 安装完毕后访问http:&#x2F;&#x2F;IP:7070操作！</span></a></li></ol></li></ol>
     </div>
 </div>
 
