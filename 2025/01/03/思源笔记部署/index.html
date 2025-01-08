@@ -570,8 +570,8 @@ mjx-container[display="true"] + br {
                     
                          <h1 id="思源笔记"><a class="markdownIt-Anchor" href="#思源笔记"></a> 思源笔记</h1>
 <h2 id="部署方式如下选择其一就可"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可"></a> <strong>部署方式如下，选择其一就可。</strong></h2>
-<div class="keep-tabs" id="keep-tabs-1736337810205">
-            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1736337810205-1">docker compose 部署</div><div class="tab" data-href="keep-tabs-1736337810205-2">docker cli 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1736337810205-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">version: "3.9"</span><br><span class="line">services:</span><br><span class="line">  main:</span><br><span class="line">    image: b3log/siyuan</span><br><span class="line">    command: ['--workspace=/siyuan/workspace/', '--accessAuthCode=z5941350.']</span><br><span class="line">    ports:</span><br><span class="line">      - 6806:6806</span><br><span class="line">    volumes:</span><br><span class="line">      - /volume1/docker/siyuanbiji:/siyuan/workspace</span><br><span class="line">    restart: unless-stopped</span><br><span class="line">    environment:</span><br><span class="line">      # A list of time zone identifiers can be found at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones</span><br><span class="line">      - TZ=Asia\Shanghai</span><br><span class="line">      - PUID=1000  # 自定义用户 ID</span><br><span class="line">      - PGID=1000  # 自定义组 ID</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1736337810205-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  -v workspace_dir_host:workspace_dir_container \</span><br><span class="line">  -p 6806:6806 \</span><br><span class="line">  -e PUID=1000 -e PGID=1000 \</span><br><span class="line">  b3log/siyuan \</span><br><span class="line">  --workspace=workspace_dir_container \</span><br><span class="line">  --accessAuthCode=xxx</span><br></pre></td></tr></table></figure></div></div>
+<div class="keep-tabs" id="keep-tabs-1736338824682">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1736338824682-1">docker compose 部署</div><div class="tab" data-href="keep-tabs-1736338824682-2">docker cli 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1736338824682-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">version: "3.9"</span><br><span class="line">services:</span><br><span class="line">  main:</span><br><span class="line">    image: b3log/siyuan</span><br><span class="line">    command: ['--workspace=/siyuan/workspace/', '--accessAuthCode=z5941350.']</span><br><span class="line">    ports:</span><br><span class="line">      - 6806:6806</span><br><span class="line">    volumes:</span><br><span class="line">      - /volume1/docker/siyuanbiji:/siyuan/workspace</span><br><span class="line">    restart: unless-stopped</span><br><span class="line">    environment:</span><br><span class="line">      # A list of time zone identifiers can be found at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones</span><br><span class="line">      - TZ=Asia\Shanghai</span><br><span class="line">      - PUID=1000  # 自定义用户 ID</span><br><span class="line">      - PGID=1000  # 自定义组 ID</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1736338824682-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  -v workspace_dir_host:workspace_dir_container \</span><br><span class="line">  -p 6806:6806 \</span><br><span class="line">  -e PUID=1000 -e PGID=1000 \</span><br><span class="line">  b3log/siyuan \</span><br><span class="line">  --workspace=workspace_dir_container \</span><br><span class="line">  --accessAuthCode=xxx</span><br></pre></td></tr></table></figure></div></div>
           </div>
 <h2 id="指令解释如下"><a class="markdownIt-Anchor" href="#指令解释如下"></a> <strong>指令解释如下</strong></h2>
 <table>
@@ -664,22 +664,6 @@ mjx-container[display="true"] + br {
                             </div>
                         
                         
-                            <div class="next-post">
-                                <a class="next"
-                                   rel="next"
-                                   href="/2025/01/03/transmission/"
-                                   title="transmission"
-                                >
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">transmission</span>
-                                        <span class="post-nav-item">下一篇</span>
-                                    </span>
-                                    <span class="right arrow-icon flex-center">
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        
                     </div>
                 
 
@@ -741,7 +725,7 @@ mjx-container[display="true"] + br {
             
                 <span class="count-item border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">3.3k</span>
+                    <span class="item-value border-box word">3.6k</span>
                 </span>
             
 
