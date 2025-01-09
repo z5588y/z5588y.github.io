@@ -506,7 +506,7 @@ mjx-container[display="true"] + br {
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Wed Jan 08 2025 18:47:23 GMT+0800">2025-01-08 18:47:23</span>
+                    <span class="datetime" data-updated="Thu Jan 09 2025 12:42:46 GMT+0800">2025-01-09 12:42:46</span>
                 </span>
             
         
@@ -529,10 +529,10 @@ mjx-container[display="true"] + br {
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/docker/">docker</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/PT/">PT</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E4%B8%8B%E8%BD%BD/">下载</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E4%B8%8B%E8%BD%BD/">下载</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/PT/">PT</a></li>
                         
                     
                 </ul>
@@ -542,7 +542,7 @@ mjx-container[display="true"] + br {
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>252 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>250 字</span>
             </span>
         
         
@@ -567,8 +567,8 @@ mjx-container[display="true"] + br {
                     
                          <h1 id="qbittorrent"><a class="markdownIt-Anchor" href="#qbittorrent"></a> qbittorrent</h1>
 <h2 id="部署方式如下选择其一就可"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可"></a> <strong>部署方式如下，选择其一就可。</strong></h2>
-<div class="keep-tabs" id="keep-tabs-1736338824660">
-            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1736338824660-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1736338824660-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1736338824660-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name=qbittorrent \</span><br><span class="line">  -e PUID=1000 \</span><br><span class="line">  -e PGID=1000 \</span><br><span class="line">  -e TZ=Etc/UTC \</span><br><span class="line">  -e WEBUI_PORT=7070 \</span><br><span class="line">  -e TORRENTING_PORT=6881 \</span><br><span class="line">  -p 7070:8080 \</span><br><span class="line">  -p 6881:6881 \</span><br><span class="line">  -p 6881:6881/udp \</span><br><span class="line">  -v /path/to/qbittorrent/appdata:/config \</span><br><span class="line">  -v /path/to/downloads:/downloads `#optional` \</span><br><span class="line">  --restart unless-stopped \</span><br><span class="line">  lscr.io/linuxserver/qbittorrent:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1736338824660-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">services:</span><br><span class="line">  qbittorrent:</span><br><span class="line">    image: lscr.io/linuxserver/qbittorrent:latest</span><br><span class="line">    container_name: qbittorrent</span><br><span class="line">    environment:</span><br><span class="line">      - PUID=1000</span><br><span class="line">      - PGID=1000</span><br><span class="line">      - TZ=Etc/UTC</span><br><span class="line">      - WEBUI_PORT=7070</span><br><span class="line">      - TORRENTING_PORT=6881</span><br><span class="line">    volumes:</span><br><span class="line">      - /path/to/qbittorrent/appdata:/config</span><br><span class="line">      - /path/to/downloads:/downloads #optional</span><br><span class="line">    ports:</span><br><span class="line">      - 7070:8080</span><br><span class="line">      - 6881:6881</span><br><span class="line">      - 6881:6881/udp</span><br><span class="line">    restart: unless-stopped</span><br></pre></td></tr></table></figure></div></div>
+<div class="keep-tabs" id="keep-tabs-1736397836328">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1736397836328-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1736397836328-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1736397836328-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name=qbittorrent \</span><br><span class="line">  -e PUID=1000 \</span><br><span class="line">  -e PGID=1000 \</span><br><span class="line">  -e TZ=Etc/UTC \</span><br><span class="line">  -e WEBUI_PORT=7070 \</span><br><span class="line">  -e TORRENTING_PORT=6881 \</span><br><span class="line">  -p 7070:8080 \</span><br><span class="line">  -p 6881:6881 \</span><br><span class="line">  -p 6881:6881/udp \</span><br><span class="line">  -v /path/to/qbittorrent/appdata:/config \</span><br><span class="line">  -v /path/to/downloads:/downloads `#optional` \</span><br><span class="line">  --restart unless-stopped \</span><br><span class="line">  lscr.io/linuxserver/qbittorrent:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1736397836328-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">services:</span><br><span class="line">  qbittorrent:</span><br><span class="line">    image: lscr.io/linuxserver/qbittorrent:latest</span><br><span class="line">    container_name: qbittorrent</span><br><span class="line">    environment:</span><br><span class="line">      - PUID=1000</span><br><span class="line">      - PGID=1000</span><br><span class="line">      - TZ=Etc/UTC</span><br><span class="line">      - WEBUI_PORT=7070</span><br><span class="line">      - TORRENTING_PORT=6881</span><br><span class="line">    volumes:</span><br><span class="line">      - /path/to/qbittorrent/appdata:/config</span><br><span class="line">      - /path/to/downloads:/downloads #optional</span><br><span class="line">    ports:</span><br><span class="line">      - 7070:8080</span><br><span class="line">      - 6881:6881</span><br><span class="line">      - 6881:6881/udp</span><br><span class="line">    restart: unless-stopped</span><br></pre></td></tr></table></figure></div></div>
           </div>
 <div class="keep-note primary"><p><strong><code>WEBUI_PORT=7070</code></strong><br>
 <strong><code>-p 7070:8080</code></strong></p>
@@ -586,7 +586,7 @@ mjx-container[display="true"] + br {
 <p><strong>WEB访问不了解决方式：</strong><br>
 <strong>找到<code>qbittorrent.conf</code>文件结尾添加以下两项参数</strong></p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**WebUI\HostHeaderValidation=false**</span><br><span class="line">**WebUI\HTTPS\Enabled=false**</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WebUI\HostHeaderValidation=false</span><br><span class="line">WebUI\HTTPS\Enabled=false</span><br></pre></td></tr></table></figure>
 
                     
                 </div>
@@ -603,11 +603,11 @@ mjx-container[display="true"] + br {
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/PT/">PT</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E4%B8%8B%E8%BD%BD/">下载</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E4%B8%8B%E8%BD%BD/">下载</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/PT/">PT</a>
                                     </li>
                                 
                             </ul>
@@ -626,14 +626,14 @@ mjx-container[display="true"] + br {
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2025/01/03/lucky%E9%83%A8%E7%BD%B2/"
-                                   title="lucky部署"
+                                   href="/2025/01/03/Zdir/"
+                                   title="Zdir"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">lucky部署</span>
+                                        <span class="post-nav-title-item text-ellipsis">Zdir</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -643,11 +643,11 @@ mjx-container[display="true"] + br {
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2025/01/03/WBO%E7%99%BD%E6%9D%BF%E7%BB%98%E7%94%BB/"
-                                   title="WBO白板绘画"
+                                   href="/2025/01/03/lucky%E9%83%A8%E7%BD%B2/"
+                                   title="lucky部署"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">WBO白板绘画</span>
+                                        <span class="post-nav-title-item text-ellipsis">lucky部署</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
