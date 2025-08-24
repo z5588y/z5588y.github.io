@@ -9,7 +9,7 @@
     
     <title>
         
-            qbittorrent |
+            transmission |
         
         zoyo
     </title>
@@ -465,7 +465,7 @@ mjx-container[display="true"] + br {
                      style="height: 400px"
                 >
                     <div class="cover-post-title">
-                        qbittorrent
+                        transmission
                     </div>
                     <img class="post-cover" src="/images/photos/img-4.png"
                          onerror="this.style.display='none'"
@@ -500,13 +500,13 @@ mjx-container[display="true"] + br {
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2025-01-03 13:23:50</span>
+                <span class="datetime">2025-01-09 13:23:50</span>
             </span>
 
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Thu Jan 09 2025 12:42:46 GMT+0800">2025-01-09 12:42:46</span>
+                    <span class="datetime" data-updated="Sun Aug 24 2025 22:57:08 GMT+0800">2025-08-24 22:57:08</span>
                 </span>
             
         
@@ -535,6 +535,9 @@ mjx-container[display="true"] + br {
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E4%B8%8B%E8%BD%BD/">下载</a></li>
                         
                     
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%A7%8D%E5%AD%90/">种子</a></li>
+                        
+                    
                 </ul>
             </span>
         
@@ -542,7 +545,7 @@ mjx-container[display="true"] + br {
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>250 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>398 字</span>
             </span>
         
         
@@ -565,28 +568,85 @@ mjx-container[display="true"] + br {
                     
 
                     
-                         <h1 id="qbittorrent"><a class="markdownIt-Anchor" href="#qbittorrent"></a> qbittorrent</h1>
+                         <h1 id="transmission"><a class="markdownIt-Anchor" href="#transmission"></a> transmission</h1>
 <h2 id="部署方式如下选择其一就可"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可"></a> <strong>部署方式如下，选择其一就可。</strong></h2>
-<div class="keep-tabs" id="keep-tabs-1756047006686">
-            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756047006686-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756047006686-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756047006686-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name=qbittorrent \</span><br><span class="line">  -e PUID=1000 \</span><br><span class="line">  -e PGID=1000 \</span><br><span class="line">  -e TZ=Etc/UTC \</span><br><span class="line">  -e WEBUI_PORT=7070 \</span><br><span class="line">  -e TORRENTING_PORT=6881 \</span><br><span class="line">  -p 7070:8080 \</span><br><span class="line">  -p 6881:6881 \</span><br><span class="line">  -p 6881:6881/udp \</span><br><span class="line">  -v /path/to/qbittorrent/appdata:/config \</span><br><span class="line">  -v /path/to/downloads:/downloads `#optional` \</span><br><span class="line">  --restart unless-stopped \</span><br><span class="line">  lscr.io/linuxserver/qbittorrent:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756047006686-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">services:</span><br><span class="line">  qbittorrent:</span><br><span class="line">    image: lscr.io/linuxserver/qbittorrent:latest</span><br><span class="line">    container_name: qbittorrent</span><br><span class="line">    environment:</span><br><span class="line">      - PUID=1000</span><br><span class="line">      - PGID=1000</span><br><span class="line">      - TZ=Etc/UTC</span><br><span class="line">      - WEBUI_PORT=7070</span><br><span class="line">      - TORRENTING_PORT=6881</span><br><span class="line">    volumes:</span><br><span class="line">      - /path/to/qbittorrent/appdata:/config</span><br><span class="line">      - /path/to/downloads:/downloads #optional</span><br><span class="line">    ports:</span><br><span class="line">      - 7070:8080</span><br><span class="line">      - 6881:6881</span><br><span class="line">      - 6881:6881/udp</span><br><span class="line">    restart: unless-stopped</span><br></pre></td></tr></table></figure></div></div>
+<div class="keep-tabs" id="keep-tabs-1756047466209">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756047466209-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756047466209-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756047466209-1"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name=transmission \</span><br><span class="line">  -e PUID=1000 \</span><br><span class="line">  -e PGID=1000 \</span><br><span class="line">  -e TZ=Etc/UTC \</span><br><span class="line">  -e TRANSMISSION_WEB_HOME= `#optional` \</span><br><span class="line">  -e USER= `#optional` \</span><br><span class="line">  -e PASS= `#optional` \</span><br><span class="line">  -e WHITELIST= `#optional` \</span><br><span class="line">  -e PEERPORT= `#optional` \</span><br><span class="line">  -e HOST_WHITELIST= `#optional` \</span><br><span class="line">  -p 9091:9091 \</span><br><span class="line">  -p 51413:51413 \</span><br><span class="line">  -p 51413:51413/udp \</span><br><span class="line">  -v /path/to/transmission/data:/config \</span><br><span class="line">  -v /path/to/downloads:/downloads \</span><br><span class="line">  -v /path/to/watch/folder:/watch \</span><br><span class="line">  --restart unless-stopped \</span><br><span class="line">  lscr.io/linuxserver/transmission:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756047466209-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">services:</span><br><span class="line">  transmission:</span><br><span class="line">    image: lscr.io/linuxserver/transmission:latest</span><br><span class="line">    container_name: transmission</span><br><span class="line">    environment:</span><br><span class="line">      - PUID=1000</span><br><span class="line">      - PGID=1000</span><br><span class="line">      - TZ=Etc/UTC</span><br><span class="line">      - TRANSMISSION_WEB_HOME= #optional</span><br><span class="line">      - USER= #optional</span><br><span class="line">      - PASS= #optional</span><br><span class="line">      - WHITELIST= #optional</span><br><span class="line">      - PEERPORT= #optional</span><br><span class="line">      - HOST_WHITELIST= #optional</span><br><span class="line">    volumes:</span><br><span class="line">      - /path/to/transmission/data:/config</span><br><span class="line">      - /path/to/downloads:/downloads</span><br><span class="line">      - /path/to/watch/folder:/watch</span><br><span class="line">    ports:</span><br><span class="line">      - 9091:9091</span><br><span class="line">      - 51413:51413</span><br><span class="line">      - 51413:51413/udp</span><br><span class="line">    restart: unless-stopped</span><br></pre></td></tr></table></figure></div></div>
           </div>
-<div class="keep-note primary"><p><strong><code>WEBUI_PORT=7070</code></strong><br>
-<strong><code>-p 7070:8080</code></strong></p>
-<p>以上两项参数的 <code>7070</code> 端口可以自定义，但是WEBUI的访问端口要保持跟自己定义的端口一直！</p>
-</div>
-<div class="keep-note danger"><p><strong><code>/path/to/qbittorrent/appdata</code>  应用文件，映射自己的文件夹路径</strong><br>
-<strong><code>/path/to/downloads</code>  下载的目录，映射自己的文件夹路径</strong></p>
-</div>
-<h2 id="安装完毕后访问httpip7070操作"><a class="markdownIt-Anchor" href="#安装完毕后访问httpip7070操作"></a> 安装完毕后访问<code>http://IP:7070</code>操作！</h2>
-<ul>
-<li><strong>用户名 <code>admin</code></strong></li>
-<li><strong>密码 <code>随机的,看运行日记</code></strong></li>
-</ul>
-<blockquote>
-<p><strong>WEB访问不了解决方式：</strong><br>
-<strong>找到<code>qbittorrent.conf</code>文件结尾添加以下两项参数</strong></p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">WebUI\HostHeaderValidation=false</span><br><span class="line">WebUI\HTTPS\Enabled=false</span><br></pre></td></tr></table></figure>
+<h2 id="指令解释如下"><a class="markdownIt-Anchor" href="#指令解释如下"></a> <strong>指令解释如下</strong></h2>
+<table>
+<thead>
+<tr>
+<th>範圍</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>​<code>​-p 9091:9091</code>​</td>
+<td>網頁介面</td>
+</tr>
+<tr>
+<td>​<code>​-p 51413:51413</code>​</td>
+<td>Torrent 連接埠 TCP</td>
+</tr>
+<tr>
+<td>​<code>​-p 51413:51413/udp</code>​</td>
+<td>Torrent 連接埠 UDP</td>
+</tr>
+<tr>
+<td>​<code>​-e PUID=1000</code>​</td>
+<td>對於 UserID - 請參閱下面的說明</td>
+</tr>
+<tr>
+<td>​<code>​-e PGID=1000</code>​</td>
+<td>對於 GroupID - 請參閱下面的說明</td>
+</tr>
+<tr>
+<td>​<code>​-e TZ=Etc/UTC</code>​</td>
+<td>指定要使用的時區，請參閱此清單⁠。</td>
+</tr>
+<tr>
+<td>​<code>​-e TRANSMISSION_WEB_HOME=</code>​</td>
+<td>指定備用 UI 資料夾的路徑。</td>
+</tr>
+<tr>
+<td>​<code>​-e USER=</code>​</td>
+<td>指定介面的可選用戶名</td>
+</tr>
+<tr>
+<td>​<code>​-e PASS=</code>​</td>
+<td>為介面指定可選密碼</td>
+</tr>
+<tr>
+<td>​<code>​-e WHITELIST=</code>​</td>
+<td>指定逗號分隔的 IP 白名單的可選清單。填入 rpc-whitelist 設定。</td>
+</tr>
+<tr>
+<td>​<code>​-e PEERPORT=</code>​</td>
+<td>指定 torrent TCP/UDP 連線的選用連接埠。填充對等連接埠設定。</td>
+</tr>
+<tr>
+<td>​<code>​-e HOST_WHITELIST=</code>​</td>
+<td>指定逗號分隔的 dns 名稱白名單的可選清單。填入 rpc-host-whitelist 設定。</td>
+</tr>
+<tr>
+<td>​<code>​-v /config</code>​</td>
+<td>傳輸應儲存設定檔和日誌的位置。</td>
+</tr>
+<tr>
+<td>​<code>​-v /downloads</code>​</td>
+<td>下載的本地路徑。</td>
+</tr>
+<tr>
+<td>​<code>​-v /watch</code>​</td>
+<td>監視 torrent 檔案的資料夾。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="初始化"><a class="markdownIt-Anchor" href="#初始化"></a> 初始化</h3>
+<p>安装完毕后访问<code>http://IP:9091</code>操作！</p>
+<button onclick="window.open('https://github.com/jayzcoder/TrguiNG')" class="keep-button color-danger size-large">需要中文UI请点击此处下载</button>
 
                     
                 </div>
@@ -610,6 +670,10 @@ mjx-container[display="true"] + br {
                                         <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E4%B8%8B%E8%BD%BD/">下载</a>
                                     </li>
                                 
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%A7%8D%E5%AD%90/">种子</a>
+                                    </li>
+                                
                             </ul>
                         
                     </div>
@@ -626,14 +690,14 @@ mjx-container[display="true"] + br {
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2025/01/03/lucky%E9%83%A8%E7%BD%B2/"
-                                   title="lucky部署"
+                                   href="/2025/01/10/WBO%E7%99%BD%E6%9D%BF%E7%BB%98%E7%94%BB/"
+                                   title="WBO白板绘画"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">lucky部署</span>
+                                        <span class="post-nav-title-item text-ellipsis">WBO白板绘画</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -643,11 +707,11 @@ mjx-container[display="true"] + br {
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2025/01/03/transmission/"
-                                   title="transmission"
+                                   href="/2025/01/08/showdoc%E9%83%A8%E7%BD%B2/"
+                                   title="showdoc部署"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">transmission</span>
+                                        <span class="post-nav-title-item text-ellipsis">showdoc部署</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -675,7 +739,7 @@ mjx-container[display="true"] + br {
             <div class="pc-post-toc left-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#qbittorrent"><span class="nav-number">1.</span> <span class="nav-text"> qbittorrent</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%AE%8C%E6%AF%95%E5%90%8E%E8%AE%BF%E9%97%AEhttpip7070%E6%93%8D%E4%BD%9C"><span class="nav-number">1.2.</span> <span class="nav-text"> 安装完毕后访问http:&#x2F;&#x2F;IP:7070操作！</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#transmission"><span class="nav-number">1.</span> <span class="nav-text"> transmission</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E8%A7%A3%E9%87%8A%E5%A6%82%E4%B8%8B"><span class="nav-number">1.2.</span> <span class="nav-text"> 指令解释如下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 初始化</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 
@@ -869,7 +933,7 @@ mjx-container[display="true"] + br {
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#qbittorrent"><span class="nav-number">1.</span> <span class="nav-text"> qbittorrent</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%AE%8C%E6%AF%95%E5%90%8E%E8%AE%BF%E9%97%AEhttpip7070%E6%93%8D%E4%BD%9C"><span class="nav-number">1.2.</span> <span class="nav-text"> 安装完毕后访问http:&#x2F;&#x2F;IP:7070操作！</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#transmission"><span class="nav-number">1.</span> <span class="nav-text"> transmission</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E8%A7%A3%E9%87%8A%E5%A6%82%E4%B8%8B"><span class="nav-number">1.2.</span> <span class="nav-text"> 指令解释如下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 初始化</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
 

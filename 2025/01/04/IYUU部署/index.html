@@ -9,7 +9,7 @@
     
     <title>
         
-            showdoc部署 |
+            IYUU部署 |
         
         zoyo
     </title>
@@ -465,7 +465,7 @@ mjx-container[display="true"] + br {
                      style="height: 400px"
                 >
                     <div class="cover-post-title">
-                        showdoc部署
+                        IYUU部署
                     </div>
                     <img class="post-cover" src="/images/photos/img-4.png"
                          onerror="this.style.display='none'"
@@ -500,13 +500,13 @@ mjx-container[display="true"] + br {
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2025-01-03 13:23:50</span>
+                <span class="datetime">2025-01-04 13:23:50</span>
             </span>
 
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Tue Jan 07 2025 18:48:03 GMT+0800">2025-01-07 18:48:03</span>
+                    <span class="datetime" data-updated="Sun Aug 24 2025 22:56:01 GMT+0800">2025-08-24 22:56:01</span>
                 </span>
             
         
@@ -529,16 +529,13 @@ mjx-container[display="true"] + br {
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/docker/">docker</a></li>
                         
                     
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/PT/">PT</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E8%BE%85%E7%A7%8D/">辅种</a></li>
+                        
+                    
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%99%E7%A8%8B/">教程</a></li>
-                        
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%86%99%E4%BD%9C/">写作</a></li>
-                        
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%AE%9E%E7%94%A8/">实用</a></li>
-                        
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%88%86%E4%BA%AB/">分享</a></li>
                         
                     
                 </ul>
@@ -548,7 +545,7 @@ mjx-container[display="true"] + br {
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>140 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>346 字</span>
             </span>
         
         
@@ -571,25 +568,59 @@ mjx-container[display="true"] + br {
                     
 
                     
-                         <h1 id="showdoc部署"><a class="markdownIt-Anchor" href="#showdoc部署"></a> showdoc部署</h1>
+                         <h1 id="iyuu部署"><a class="markdownIt-Anchor" href="#iyuu部署"></a> IYUU部署</h1>
+<blockquote>
+<p>安装时需要挂载两个目录和一个端口；</p>
+<p>容器内目录<code>/iyuu</code>和<code>/data</code>为固定值，他们是<strong>兄弟关系</strong>，不是父子关系，切勿套娃。</p>
+<p>本地目录<code>/root/iyuu</code>挂载到容器内<code>/iyuu</code>（存放源码）；</p>
+<p>本地目录<code>/root/data</code>挂载到容器内<code>/data</code>（存放mysql数据库）；</p>
+<p><strong>你可以自定义本地目录</strong>​ <strong>​<code>/root/iyuu</code>​</strong>​<strong>和</strong>​ <strong>​<code>/root/data</code>​</strong></p>
+</blockquote>
 <h2 id="部署方式如下选择其一就可"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可"></a> <strong>部署方式如下，选择其一就可。</strong></h2>
-<div class="keep-tabs" id="keep-tabs-1756047006701">
-            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756047006701-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756047006701-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756047006701-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -d </span><br><span class="line">--name showdoc </span><br><span class="line">--user=root </span><br><span class="line">--privileged=true </span><br><span class="line">-p 5099:80  </span><br><span class="line">--restart always </span><br><span class="line">-v /volume1/docker/showdoc:/var/www/html/ </span><br><span class="line">star7th/showdoc</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756047006701-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">version: '3.8'</span><br><span class="line">services:</span><br><span class="line">  showdoc:</span><br><span class="line">    image: star7th/showdoc</span><br><span class="line">    container_name: showdoc</span><br><span class="line">    user: root</span><br><span class="line">    privileged: true</span><br><span class="line">    ports:</span><br><span class="line">      - "5099:80"</span><br><span class="line">    restart: always</span><br><span class="line">    volumes:</span><br><span class="line">      - /volume1/docker/showdoc:/var/www/html/</span><br></pre></td></tr></table></figure></div></div>
+<div class="keep-tabs" id="keep-tabs-1756047466168">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756047466168-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756047466168-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756047466168-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -itd \</span><br><span class="line">    -v /root/iyuu:/iyuu \</span><br><span class="line">    -v /root/data:/data \</span><br><span class="line">    -p 8780:8780 \</span><br><span class="line">    --name IYUUPlus \</span><br><span class="line">    --restart=always \</span><br><span class="line">    iyuucn/iyuuplus-dev:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756047466168-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">version: '3.8'  # 使用适当的Docker Compose文件版本</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  iyuuplus:</span><br><span class="line">    image: iyuucn/iyuuplus-dev:latest  # 指定要使用的镜像</span><br><span class="line">    container_name: IYUUPlus  # 设置容器的名称</span><br><span class="line">    restart: always  # 设置重启策略为总是重启</span><br><span class="line">    ports:</span><br><span class="line">      - "8780:8780"  # 端口映射</span><br><span class="line">    volumes:</span><br><span class="line">      - /root/iyuu:/iyuu  # 卷挂载，宿主机目录到容器目录</span><br><span class="line">      - /root/data:/data  # 卷挂载，宿主机目录到容器目录</span><br></pre></td></tr></table></figure></div></div>
           </div>
-<h2 id="指令修改部分如下"><a class="markdownIt-Anchor" href="#指令修改部分如下"></a> <strong>指令修改部分如下</strong></h2>
-<blockquote>
-<ul>
-<li><strong><code>5099</code> 可以改成自己想要的端口</strong></li>
-<li><strong><code>/volume1/docker/showdoc</code> 改成自己想要映射的文件夹</strong></li>
-</ul>
-</blockquote>
-<h3 id="初始化"><a class="markdownIt-Anchor" href="#初始化"></a> 初始化</h3>
-<p><strong>部署好后 <a class="link" target="_blank" rel="noopener" href="http://localhost:5099">http://localhost:5099<i class="fas fa-external-link-alt"></i></a> 访问</strong></p>
-<blockquote>
-<p><strong>默认账户名：<code>showdoc</code></strong><br>
-<strong>默认密码：<code>123456</code></strong></p>
-</blockquote>
-<h2 id="进入设置后可以更改密码"><a class="markdownIt-Anchor" href="#进入设置后可以更改密码"></a> 进入设置后可以更改密码</h2>
+<table>
+<thead>
+<tr>
+<th>docker命令解释</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>参数</td>
+<td>解释</td>
+</tr>
+<tr>
+<td>​<code>​--name</code>​</td>
+<td>容器名字</td>
+</tr>
+<tr>
+<td>​<code>​-v</code>​</td>
+<td>资源挂载到容器，冒号分隔 本地目录文件:容器目录文件</td>
+</tr>
+<tr>
+<td>​<code>​-p</code>​</td>
+<td>本地端口绑定到容器端口，冒号分隔 本地端口:容器端口</td>
+</tr>
+<tr>
+<td>​<code>​--net=host</code>​</td>
+<td>容器所使用的网络模式。</td>
+</tr>
+<tr>
+<td>​<code>​--restart</code>​</td>
+<td>启动模式</td>
+</tr>
+<tr>
+<td>​<code>​iyuucn/iyuuplus-dev:latest</code>​</td>
+<td>​<code>​iyuu/iyuuplus-dev</code>​是镜像名字，<code>​latest</code>​是标签名</td>
+</tr>
+</tbody>
+</table>
+<h2 id="初始化"><a class="markdownIt-Anchor" href="#初始化"></a> 初始化</h2>
+<p><strong>部署好后 <a class="link" target="_blank" rel="noopener" href="http://localhost:8780">http://localhost:8780<i class="fas fa-external-link-alt"></i></a> 访问</strong></p>
+<button onclick="window.open('https://doc.iyuu.cn/guide/getting-started')" class="keep-button color-success size-large">点击查看官方文档</button>
 
                     
                 </div>
@@ -606,19 +637,15 @@ mjx-container[display="true"] + br {
                                     </li>
                                 
                                     <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/PT/">PT</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E8%BE%85%E7%A7%8D/">辅种</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
                                         <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%86%99%E4%BD%9C/">写作</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%AE%9E%E7%94%A8/">实用</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%88%86%E4%BA%AB/">分享</a>
                                     </li>
                                 
                             </ul>
@@ -637,14 +664,14 @@ mjx-container[display="true"] + br {
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2025/01/03/transmission/"
-                                   title="transmission"
+                                   href="/2025/01/05/lucky%E9%83%A8%E7%BD%B2/"
+                                   title="lucky部署"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">transmission</span>
+                                        <span class="post-nav-title-item text-ellipsis">lucky部署</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -654,11 +681,11 @@ mjx-container[display="true"] + br {
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2025/01/03/%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%86%99%E4%BD%9C%E6%B7%BB%E5%8A%A0%E9%A1%B9/"
-                                   title="写作语法指令"
+                                   href="/2025/01/03/CloudDrive2%E9%83%A8%E7%BD%B2/"
+                                   title="CloudDrive2"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">写作语法指令</span>
+                                        <span class="post-nav-title-item text-ellipsis">CloudDrive2</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -686,7 +713,7 @@ mjx-container[display="true"] + br {
             <div class="pc-post-toc left-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#showdoc%E9%83%A8%E7%BD%B2"><span class="nav-number">1.</span> <span class="nav-text"> showdoc部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E4%BF%AE%E6%94%B9%E9%83%A8%E5%88%86%E5%A6%82%E4%B8%8B"><span class="nav-number">1.2.</span> <span class="nav-text"> 指令修改部分如下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 初始化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5%E8%AE%BE%E7%BD%AE%E5%90%8E%E5%8F%AF%E4%BB%A5%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81"><span class="nav-number">1.3.</span> <span class="nav-text"> 进入设置后可以更改密码</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iyuu%E9%83%A8%E7%BD%B2"><span class="nav-number">1.</span> <span class="nav-text"> IYUU部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text"> 初始化</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -880,7 +907,7 @@ mjx-container[display="true"] + br {
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#showdoc%E9%83%A8%E7%BD%B2"><span class="nav-number">1.</span> <span class="nav-text"> showdoc部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E4%BF%AE%E6%94%B9%E9%83%A8%E5%88%86%E5%A6%82%E4%B8%8B"><span class="nav-number">1.2.</span> <span class="nav-text"> 指令修改部分如下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 初始化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5%E8%AE%BE%E7%BD%AE%E5%90%8E%E5%8F%AF%E4%BB%A5%E6%9B%B4%E6%94%B9%E5%AF%86%E7%A0%81"><span class="nav-number">1.3.</span> <span class="nav-text"> 进入设置后可以更改密码</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iyuu%E9%83%A8%E7%BD%B2"><span class="nav-number">1.</span> <span class="nav-text"> IYUU部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text"> 初始化</span></a></li></ol></li></ol>
     </div>
 </div>
 

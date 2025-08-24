@@ -9,7 +9,7 @@
     
     <title>
         
-            OneNav |
+            lucky部署 |
         
         zoyo
     </title>
@@ -465,7 +465,7 @@ mjx-container[display="true"] + br {
                      style="height: 400px"
                 >
                     <div class="cover-post-title">
-                        OneNav
+                        lucky部署
                     </div>
                     <img class="post-cover" src="/images/photos/img-4.png"
                          onerror="this.style.display='none'"
@@ -500,13 +500,13 @@ mjx-container[display="true"] + br {
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2025-01-03 13:23:50</span>
+                <span class="datetime">2025-01-05 13:23:50</span>
             </span>
 
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Sun Jan 05 2025 18:08:54 GMT+0800">2025-01-05 18:08:54</span>
+                    <span class="datetime" data-updated="Sun Aug 24 2025 22:56:12 GMT+0800">2025-08-24 22:56:12</span>
                 </span>
             
         
@@ -529,10 +529,16 @@ mjx-container[display="true"] + br {
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/docker/">docker</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%AF%BC%E8%88%AA/">导航</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%99%E7%A8%8B/">教程</a></li>
                         
                     
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%AE%9E%E7%94%A8/">实用</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%88%86%E4%BA%AB/">分享</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%86%99%E4%BD%9C/">写作</a></li>
                         
                     
                 </ul>
@@ -542,7 +548,7 @@ mjx-container[display="true"] + br {
         
         
             <span class="meta-info-item post-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>207 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>157 字</span>
             </span>
         
         
@@ -565,20 +571,33 @@ mjx-container[display="true"] + br {
                     
 
                     
-                         <h1 id="onenav导航页"><a class="markdownIt-Anchor" href="#onenav导航页"></a> OneNav导航页</h1>
+                         <h1 id="lucky部署"><a class="markdownIt-Anchor" href="#lucky部署"></a> lucky部署</h1>
 <h2 id="部署方式如下选择其一就可"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可"></a> <strong>部署方式如下，选择其一就可。</strong></h2>
-<div class="keep-tabs" id="keep-tabs-1756047006658">
-            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756047006658-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756047006658-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756047006658-1"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  -d \</span><br><span class="line">  --name onenav \</span><br><span class="line">  -p 3080:80 \</span><br><span class="line">  -v /data/onenav:/data/wwwroot/default/data \</span><br><span class="line">  helloz/onenav</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756047006658-2"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">version: <span class="string">'3'</span></span><br><span class="line">services:</span><br><span class="line">  onenav:</span><br><span class="line">    container_name: onenav</span><br><span class="line">    ports:</span><br><span class="line">      - <span class="string">"3080:80"</span></span><br><span class="line">    volumes:</span><br><span class="line">      - <span class="string">'./data:/data/wwwroot/default/data'</span></span><br><span class="line">    image: <span class="string">'helloz/onenav'</span></span><br><span class="line">    restart:</span><br><span class="line">      always</span><br></pre></td></tr></table></figure></div></div>
+<div class="keep-tabs" id="keep-tabs-1756047466205">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756047466205-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756047466205-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756047466205-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  --name lucky \</span><br><span class="line">  --network host \</span><br><span class="line">  --restart always \</span><br><span class="line">  -v /volume1/docker/lucky:/goodluck \</span><br><span class="line">  -d \</span><br><span class="line">  gdy666/lucky:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756047466205-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">version: '3'</span><br><span class="line">services:</span><br><span class="line">  lucky:</span><br><span class="line">    image: gdy666/lucky:latest</span><br><span class="line">    container_name: lucky</span><br><span class="line">    ports:</span><br><span class="line">      - "16601:16601"</span><br><span class="line">    volumes:</span><br><span class="line">      - /volume1/docker/lucky:/goodluck</span><br><span class="line">    restart: always</span><br><span class="line">    network_mode: host</span><br></pre></td></tr></table></figure></div></div>
           </div>
 <h2 id="指令修改部分如下"><a class="markdownIt-Anchor" href="#指令修改部分如下"></a> <strong>指令修改部分如下</strong></h2>
+<blockquote>
 <ul>
-<li><code>3080</code>：第1个3080端口为访问端口，可自行修改，第2个80为容器内部端口，请不要修改</li>
-<li><code>/data/onenav</code>：本机挂载目录，用于持久存储Onenav数据</li>
-<li><code>/data/wwwroot/default/data</code>：<strong>这个路径请不要修改，否则会造成数据丢失</strong></li>
+<li><strong><code>/volume1/docker/lucky</code> 改成自己想要映射的文件夹</strong></li>
 </ul>
-<p>如果您是国内网络环境，无法拉取Docker进行，可以使用我们提供的镜像加速地址，只需要将上面的<code>helloz/onenav</code>改成<code>pub.tcp.mk/helloz/onenav</code>即可</p>
+</blockquote>
 <h3 id="初始化"><a class="markdownIt-Anchor" href="#初始化"></a> 初始化</h3>
-<p>安装完毕后访问<code>http://IP:3080</code>完成初始化操作！</p>
+<p><strong>部署好后 <a class="link" target="_blank" rel="noopener" href="http://localhost:16601">http://localhost:16601<i class="fas fa-external-link-alt"></i></a> 访问</strong></p>
+<blockquote>
+<p><strong>默认账户名：<code>666</code></strong><br>
+<strong>默认密码：<code>666</code></strong></p>
+</blockquote>
+<h2 id="进入设置后可以更改账户及密码"><a class="markdownIt-Anchor" href="#进入设置后可以更改账户及密码"></a> 进入设置后可以更改账户及密码</h2>
+<p><img lazyload="" alt="lucky设置" data-src="https://github.com/z5588y/picx-images-hosting/raw/master/lucky%E8%AE%BE%E7%BD%AE.7w6wju33bl.webp"></p>
+<blockquote>
+<ul>
+<li><strong>外网访问</strong></li>
+<li><strong>禁用安全入口设置检查</strong></li>
+<li><strong>设置账号密码</strong><br>
+<strong>以上三步需要操作，防止远程无法访问！！！</strong></li>
+</ul>
+</blockquote>
 
                     
                 </div>
@@ -595,11 +614,19 @@ mjx-container[display="true"] + br {
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%AF%BC%E8%88%AA/">导航</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
                                         <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%AE%9E%E7%94%A8/">实用</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%88%86%E4%BA%AB/">分享</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%86%99%E4%BD%9C/">写作</a>
                                     </li>
                                 
                             </ul>
@@ -618,14 +645,14 @@ mjx-container[display="true"] + br {
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2025/01/03/Markdown%E8%AF%AD%E6%B3%95/"
-                                   title="Markdown语法"
+                                   href="/2025/01/06/OnaNav/"
+                                   title="OneNav"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Markdown语法</span>
+                                        <span class="post-nav-title-item text-ellipsis">OneNav</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -635,11 +662,11 @@ mjx-container[display="true"] + br {
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2025/01/03/WBO%E7%99%BD%E6%9D%BF%E7%BB%98%E7%94%BB/"
-                                   title="WBO白板绘画"
+                                   href="/2025/01/04/IYUU%E9%83%A8%E7%BD%B2/"
+                                   title="IYUU部署"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">WBO白板绘画</span>
+                                        <span class="post-nav-title-item text-ellipsis">IYUU部署</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -667,7 +694,7 @@ mjx-container[display="true"] + br {
             <div class="pc-post-toc left-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#onenav%E5%AF%BC%E8%88%AA%E9%A1%B5"><span class="nav-number">1.</span> <span class="nav-text"> OneNav导航页</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E4%BF%AE%E6%94%B9%E9%83%A8%E5%88%86%E5%A6%82%E4%B8%8B"><span class="nav-number">1.2.</span> <span class="nav-text"> 指令修改部分如下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 初始化</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lucky%E9%83%A8%E7%BD%B2"><span class="nav-number">1.</span> <span class="nav-text"> lucky部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E4%BF%AE%E6%94%B9%E9%83%A8%E5%88%86%E5%A6%82%E4%B8%8B"><span class="nav-number">1.2.</span> <span class="nav-text"> 指令修改部分如下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 初始化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5%E8%AE%BE%E7%BD%AE%E5%90%8E%E5%8F%AF%E4%BB%A5%E6%9B%B4%E6%94%B9%E8%B4%A6%E6%88%B7%E5%8F%8A%E5%AF%86%E7%A0%81"><span class="nav-number">1.3.</span> <span class="nav-text"> 进入设置后可以更改账户及密码</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -861,7 +888,7 @@ mjx-container[display="true"] + br {
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#onenav%E5%AF%BC%E8%88%AA%E9%A1%B5"><span class="nav-number">1.</span> <span class="nav-text"> OneNav导航页</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E4%BF%AE%E6%94%B9%E9%83%A8%E5%88%86%E5%A6%82%E4%B8%8B"><span class="nav-number">1.2.</span> <span class="nav-text"> 指令修改部分如下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 初始化</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#lucky%E9%83%A8%E7%BD%B2"><span class="nav-number">1.</span> <span class="nav-text"> lucky部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E4%BF%AE%E6%94%B9%E9%83%A8%E5%88%86%E5%A6%82%E4%B8%8B"><span class="nav-number">1.2.</span> <span class="nav-text"> 指令修改部分如下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.1.</span> <span class="nav-text"> 初始化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5%E8%AE%BE%E7%BD%AE%E5%90%8E%E5%8F%AF%E4%BB%A5%E6%9B%B4%E6%94%B9%E8%B4%A6%E6%88%B7%E5%8F%8A%E5%AF%86%E7%A0%81"><span class="nav-number">1.3.</span> <span class="nav-text"> 进入设置后可以更改账户及密码</span></a></li></ol></li></ol>
     </div>
 </div>
 
