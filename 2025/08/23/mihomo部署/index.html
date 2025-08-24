@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="zoyo">
+    
+    <title>
+        
+            docker部署标本 |
+        
+        zoyo
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"z5588y.github.io","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"zoyo","author":"zoyo","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/                      || fa-solid fa-home","archives":"/archives          || fa-solid fa-box-archive","tags":"/tags                  || fa-solid fa-tags","categories":"/categories      || fa-solid fa-layer-group","links":"/links                || fa-solid fa-link","photos":"/photos              || fa-solid fa-image","tools":"/tools                || fa-solid fa-tools","about":"/about                || fa-solid fa-user-graduate"},"first_screen":{"enable":true,"background_img":"/images/photos/img-1.png","background_img_dark":"/images/bg.svg","description":"又菜又爱玩的数码小菜鸡。","hitokoto":false},"social_contact":{"enable":true,"links":{"email":"379349182@qq.com"}},"scroll":{"progress_bar":true,"percent":true,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"updated || fa-solid fa-home","post_datetime_format":"YYYY-MM-DD HH:mm:ss"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["炼气","筑基","结丹","元婴","化神"]},"word_count":{"wordcount":true,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"obsidian"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":false,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":true},"lazyload":{"enable":true},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2020,"word_count":true,"site_deploy":{"enable":true,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{"links":[{"title":"朋友们 1"},{"name":"XPoet","link":"https://xpoet.cn","description":"懒惰是程序员第一生产力","avatar":"https://xpoet.cn/images/avatar.png"},{"name":"不知名艺术家","link":"https://jinzhanqi.com/","description":"love artist, love code.","avatar":"https://s3.ax1x.com/2020/11/17/DVvkB4.jpg"},{"name":"战国时代","link":"https://jinzhanqi.com/","description":"love artist, love code.","avatar":"https://s3.ax1x.com/2020/11/17/DVvkB4.jpg"},{"name":"百家","link":"https://jinzhanqi.com/","description":"love artist, love code.","avatar":"https://s3.ax1x.com/2020/11/17/DVvkB4.jpg"},{"title":"兄弟们 1"},{"name":"XPoet","link":"https://xpoet.cn","description":"懒惰是程序员第一生产力","avatar":"https://xpoet.cn/images/avatar.png"},{"name":"不知名艺术家","link":"https://jinzhanqi.com/","description":"love artist, love code.","avatar":"https://s3.ax1x.com/2020/11/17/DVvkB4.jpg"},{"name":"战国时代","link":"https://jinzhanqi.com/","description":"love artist, love code.","avatar":"https://s3.ax1x.com/2020/11/17/DVvkB4.jpg"},{"name":"百家","link":"https://jinzhanqi.com/","description":"love artist, love code.","avatar":"https://s3.ax1x.com/2020/11/17/DVvkB4.jpg"}],"photos":[{"url":"https://gratisography.com/wp-content/uploads/2024/11/gratisography-cool-sphere-1170x780.jpg","name":"XPoet"},{"url":"/images/photos/img-1.png","name":"img1"},{"url":"/images/photos/img-2.png","name":"img2"},{"url":"/images/photos/img-3.png","name":"img3"},{"url":"/images/photos/img-4.png","name":"img4"},{"url":"/images/photos/img-5.png","name":"img5"},{"url":"/images/photos/img-6.png","name":"img6"},{"url":"/images/photos/img-7.png","name":"img7"},{"url":"/images/photos/img-8.png","name":"img8"},{"url":"/images/photos/img-9.png","name":"img9"},"......","......"],"tools":[{"category":"聊天 AI","anchorId":"JUU4JTgxJThBJUU1JUE0JUE5JTIwQUk0"},{"name":"ChatGPT","link":"https://chat.openai.com/","description":"OpenAI 旗下 AI 聊天对话工具","image":"https://th.bing.com/th/id/OIP.MzrxU931LdalpNUB95M3iwHaHa?rs=1&pid=ImgDetMain"},{"name":"Gemini","link":"https://gemini.google.com/app","description":"Google 旗下 AI 聊天对话工具","image":"https://img.freepik.com/premium-vector/zodiac-sign-gemini-isolated-vector-icon-zodiac-symbol-with-starry-gradient-design_502651-116.jpg"},{"name":"通义千问","link":"https://tongyi.aliyun.com/","description":"阿里云 旗下 AI 聊天对话工具","image":"https://th.bing.com/th/id/OIP.enWbfx_DhIxTjE4AmtwQ4gHaHa?rs=1&pid=ImgDetMain"},{"category":"绘画 AI","anchorId":"JUU3JUJCJTk4JUU3JTk0JUJCJTIwQUk4"},{"name":"ChatGPT","link":"https://chat.openai.com/","description":"OpenAI 旗下 AI 聊天对话工具","image":"/images/tools/chatgpt.svg"},{"name":"Gemini","link":"https://gemini.google.com/app","description":"Google 旗下 AI 聊天对话工具","image":"/images/tools/gemini.svg"},{"name":"通义千问","link":"https://tongyi.aliyun.com/","description":"阿里云 旗下 AI 聊天对话工具","image":"https://th.bing.com/th/id/OIP.enWbfx_DhIxTjE4AmtwQ4gHaHa?rs=1&pid=ImgDetMain"},"......"]},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               zoyo
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-home"></i>
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                
+                                归档
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/tags">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-tags"></i>
+                                
+                                标签
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/categories">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-layer-group"></i>
+                                
+                                分类
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/links">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-link"></i>
+                                
+                                友链
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/photos">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-image"></i>
+                                
+                                相册
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/tools">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-tools"></i>
+                                
+                                工具
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/about">
+                                
+                                    <i class="menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                
+                                关于
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-home"></i>
+                                </span>
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-box-archive"></i>
+                                </span>
+                            
+                            归档
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/tags">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-tags"></i>
+                                </span>
+                            
+                            标签
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-layer-group"></i>
+                                </span>
+                            
+                            分类
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/links">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-link"></i>
+                                </span>
+                            
+                            友链
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/photos">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-image"></i>
+                                </span>
+                            
+                            相册
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/tools">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-tools"></i>
+                                </span>
+                            
+                            工具
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
+                            
+                                <span class="menu-icon-wrap border-box flex-center">
+                                    <i class="drawer-menu-text-color menu-icon fa-solid fa-user-graduate"></i>
+                                </span>
+                            
+                            关于
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+                <div class="post-content-top border-box"
+                     style="height: 400px"
+                >
+                    <div class="cover-post-title">
+                        docker部署标本
+                    </div>
+                    <img class="post-cover" src="/images/photos/img-4.png"
+                         onerror="this.style.display='none'"
+                    >
+                </div>
+            
+
+            <div class="post-content-bottom border-box has-cover">
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/photos/img-3.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">zoyo</span>
+                                
+                                    <span class="author-badge">筑基</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2025-08-23 01:23:50</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Sun Aug 24 2025 21:59:32 GMT+0800">2025-08-24 21:59:32</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E5%A8%B1%E4%B9%90/">娱乐</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/docker/">docker</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%AF%BC%E8%88%AA/">导航</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%AE%9E%E7%94%A8/">实用</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>2.2k 字</span>
+            </span>
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body code-block-unshrink">
+                    
+
+                    
+                         <h1 id="docker部署项目名称"><a class="markdownIt-Anchor" href="#docker部署项目名称"></a> docker部署项目名称</h1>
+<h2 id="部署方式如下选择其一就可cli部署需要分开部署2个容器"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可cli部署需要分开部署2个容器"></a> <strong>部署方式如下，选择其一就可（cli部署需要分开部署2个容器）。</strong></h2>
+<div class="keep-tabs" id="keep-tabs-1756046297499">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756046297499-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756046297499-2">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756046297499-3">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756046297499-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name mihomo \</span><br><span class="line">  --restart unless-stopped \</span><br><span class="line">  --privileged \</span><br><span class="line">  --network host \</span><br><span class="line">  -v "$(pwd)/mihomo:/root/.config/mihomo" \</span><br><span class="line">  metacubex/mihomo</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756046297499-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name metacubexd-ui \</span><br><span class="line">  --restart unless-stopped \</span><br><span class="line">  -p 226:80 \</span><br><span class="line">  --depends-on mihomo \</span><br><span class="line">  mrxianyu/metacubexd-ui:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756046297499-3"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">services:</span><br><span class="line"></span><br><span class="line">  mihomo:</span><br><span class="line"></span><br><span class="line">    image: metacubex/mihomo</span><br><span class="line"></span><br><span class="line">    container_name: mihomo</span><br><span class="line"></span><br><span class="line">    restart: unless-stopped</span><br><span class="line"></span><br><span class="line">    privileged: true</span><br><span class="line"></span><br><span class="line">    network_mode: host</span><br><span class="line"></span><br><span class="line">    volumes:</span><br><span class="line"></span><br><span class="line">      - ./mihomo:/root/.config/mihomo</span><br><span class="line"></span><br><span class="line">  metacubexd:</span><br><span class="line"></span><br><span class="line">    image: mrxianyu/metacubexd-ui:latest</span><br><span class="line"></span><br><span class="line">    restart: unless-stopped</span><br><span class="line"></span><br><span class="line">    container_name: metacubexd-ui</span><br><span class="line"></span><br><span class="line">    ports:</span><br><span class="line"></span><br><span class="line">      - '226:80'</span><br><span class="line"></span><br><span class="line">    depends_on:</span><br><span class="line"></span><br><span class="line">      - mihomo</span><br></pre></td></tr></table></figure></div></div>
+          </div>
+<h2 id="指令修改部分如下"><a class="markdownIt-Anchor" href="#指令修改部分如下"></a> <strong>指令修改部分如下</strong></h2>
+<ul>
+<li><code>226</code>：mihomo 的Web UI端口</li>
+<li><code>./mihomo</code>：mihomo容器存储本机目录（可自己修改）</li>
+</ul>
+<h3 id="mihomo容器运行后修改mihomo目录下的configyaml文件"><a class="markdownIt-Anchor" href="#mihomo容器运行后修改mihomo目录下的configyaml文件"></a> mihomo容器运行后，修改mihomo目录下的config.yaml文件</h3>
+<ul>
+<li>把下面的yaml文件复制粘贴至mihomo<code>目录下的config.yaml</code>文件里，或者单独创建一份yaml文件上传覆盖也行（推荐）。</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">proxy-providers:</span></span><br><span class="line">  <span class="string">填入机场名:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">"填入自己订阅的链接"</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">http</span></span><br><span class="line">    <span class="attr">interval:</span> <span class="number">86400</span></span><br><span class="line">    <span class="attr">health-check:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">https://www.gstatic.com/generate_204</span></span><br><span class="line">      <span class="attr">interval:</span> <span class="number">300</span></span><br><span class="line">    <span class="attr">proxy:</span> <span class="string">直连</span></span><br><span class="line"><span class="attr">proxies:</span></span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">直连</span>, <span class="attr">type:</span> <span class="string">direct</span>}</span><br><span class="line"> </span><br><span class="line"><span class="attr">port:</span> <span class="number">7890</span></span><br><span class="line"><span class="attr">socks-port:</span> <span class="number">7891</span></span><br><span class="line"><span class="attr">redir-port:</span> <span class="number">7892</span></span><br><span class="line"><span class="attr">mixed-port:</span> <span class="number">7777</span></span><br><span class="line"><span class="attr">tproxy-port:</span> <span class="number">7894</span></span><br><span class="line"><span class="attr">allow-lan:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">bind-address:</span> <span class="string">"*"</span></span><br><span class="line"><span class="attr">ipv6:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">unified-delay:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">tcp-concurrent:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">log-level:</span> <span class="string">warning</span></span><br><span class="line"><span class="attr">find-process-mode:</span> <span class="string">'off'</span></span><br><span class="line"><span class="comment"># interface-name: en0</span></span><br><span class="line"><span class="attr">global-client-fingerprint:</span> <span class="string">chrome</span></span><br><span class="line"><span class="attr">keep-alive-idle:</span> <span class="number">600</span></span><br><span class="line"><span class="attr">keep-alive-interval:</span> <span class="number">15</span></span><br><span class="line"><span class="attr">disable-keep-alive:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">profile:</span></span><br><span class="line">  <span class="attr">store-selected:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">store-fake-ip:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="attr">external-controller:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">:9090</span></span><br><span class="line"></span><br><span class="line"><span class="attr">sniffer:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">sniff:</span></span><br><span class="line">    <span class="attr">HTTP:</span></span><br><span class="line">      <span class="attr">ports:</span> [<span class="number">80</span>, <span class="number">8080</span><span class="number">-8880</span>]</span><br><span class="line">      <span class="attr">override-destination:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">TLS:</span></span><br><span class="line">      <span class="attr">ports:</span> [<span class="number">443</span>, <span class="number">8443</span>]</span><br><span class="line">    <span class="attr">QUIC:</span></span><br><span class="line">      <span class="attr">ports:</span> [<span class="number">443</span>, <span class="number">8443</span>]</span><br><span class="line">  <span class="attr">force-domain:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">"+.v2ex.com"</span></span><br><span class="line">  <span class="attr">skip-domain:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">"+.baidu.com"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">tun:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># system/gvisor/mixed</span></span><br><span class="line">  <span class="attr">stack:</span> <span class="string">mixed</span></span><br><span class="line">  <span class="attr">dns-hijack:</span> [<span class="string">"any:53"</span>, <span class="string">"tcp://any:53"</span>]</span><br><span class="line">  <span class="attr">auto-route:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">auto-redirect:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">auto-detect-interface:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="attr">dns:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">listen:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">:1053</span></span><br><span class="line">  <span class="attr">ipv6:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">respect-rules:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">enhanced-mode:</span> <span class="string">fake-ip</span></span><br><span class="line">  <span class="attr">fake-ip-range:</span> <span class="number">28.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">/8</span></span><br><span class="line">  <span class="attr">fake-ip-filter-mode:</span> <span class="string">blacklist</span></span><br><span class="line">  <span class="attr">fake-ip-filter:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">"rule-set:private_domain,cn_domain"</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">"+.msftconnecttest.com"</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">"+.msftncsi.com"</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">"time.*.com"</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">"+.market.xiaomi.com"</span></span><br><span class="line">  <span class="attr">default-nameserver:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="number">223.5</span><span class="number">.5</span><span class="number">.5</span></span><br><span class="line">  <span class="attr">proxy-server-nameserver:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">https://223.5.5.5/dns-query</span></span><br><span class="line">  <span class="comment"># 使用运营商提供的DNS</span></span><br><span class="line">  <span class="attr">nameserver:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="number">218.2</span><span class="number">.2</span><span class="number">.2</span></span><br><span class="line">    <span class="bullet">-</span> <span class="number">218.4</span><span class="number">.4</span><span class="number">.4</span></span><br><span class="line"> </span><br><span class="line"><span class="attr">proxy-groups:</span></span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🚀</span> <span class="string">默认代理</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">香港故转</span>, <span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">📹</span> <span class="string">YouTube</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">香港故转</span>, <span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🍀</span> <span class="string">Google</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">香港故转</span>, <span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🤖</span> <span class="string">ChatGPT</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">👨🏿‍💻</span> <span class="string">GitHub</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">香港故转</span>, <span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🐬</span> <span class="string">OneDrive</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🪟</span> <span class="string">Microsoft</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🎵</span> <span class="string">TikTok</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">📲</span> <span class="string">Telegram</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">香港故转</span>, <span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🎥</span> <span class="string">NETFLIX</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">香港故转</span>, <span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">✈️</span> <span class="string">Speedtest</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">香港故转</span>, <span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">💶</span> <span class="string">PayPal</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">香港故转</span>, <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🍎</span> <span class="string">Apple</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">直连</span>, <span class="string">🚀</span> <span class="string">默认代理</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🎯</span> <span class="string">直连</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">直连</span>, <span class="string">🚀</span> <span class="string">默认代理</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🐟</span> <span class="string">漏网之鱼</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">proxies:</span> [<span class="string">🔯</span> <span class="string">香港故转</span>, <span class="string">🔯</span> <span class="string">日本故转</span>, <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="string">直连</span>]}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🇭🇰</span> <span class="string">香港节点</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">filter:</span> <span class="string">"(?i)港|hk|hongkong|hong kong"</span>}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🇯🇵</span> <span class="string">日本节点</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">filter:</span> <span class="string">"(?i)日|jp|japan"</span>}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🇸🇬</span> <span class="string">狮城节点</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">filter:</span> <span class="string">"(?i)新加坡|坡|狮城|SG|Singapore"</span>}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🇺🇲</span> <span class="string">美国节点</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">filter:</span> <span class="string">"(?i)美|us|unitedstates|united states"</span>}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🔯</span> <span class="string">香港故转</span>, <span class="attr">type:</span> <span class="string">fallback</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">tolerance:</span> <span class="number">20</span>, <span class="attr">interval:</span> <span class="number">300</span>, <span class="attr">filter:</span> <span class="string">"(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"</span>}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🔯</span> <span class="string">日本故转</span>, <span class="attr">type:</span> <span class="string">fallback</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">tolerance:</span> <span class="number">20</span>, <span class="attr">interval:</span> <span class="number">300</span>, <span class="attr">filter:</span> <span class="string">"(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"</span> }</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🔯</span> <span class="string">狮城故转</span>, <span class="attr">type:</span> <span class="string">fallback</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">tolerance:</span> <span class="number">20</span>, <span class="attr">interval:</span> <span class="number">300</span>, <span class="attr">filter:</span> <span class="string">"(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(台|日|韩|深|美)).)*$"</span>}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🔯</span> <span class="string">美国故转</span>, <span class="attr">type:</span> <span class="string">fallback</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">tolerance:</span> <span class="number">20</span>, <span class="attr">interval:</span> <span class="number">300</span>, <span class="attr">filter:</span> <span class="string">"(?=.*(美|US|(?i)States|America))^((?!(港|台|韩|新|日)).)*$"</span> }</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">♻️</span> <span class="string">香港自动</span>, <span class="attr">type:</span> <span class="string">url-test</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">tolerance:</span> <span class="number">20</span>, <span class="attr">interval:</span> <span class="number">300</span>, <span class="attr">filter:</span> <span class="string">"(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"</span>}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">♻️</span> <span class="string">日本自动</span>, <span class="attr">type:</span> <span class="string">url-test</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">tolerance:</span> <span class="number">20</span>, <span class="attr">interval:</span> <span class="number">300</span>, <span class="attr">filter:</span> <span class="string">"(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"</span> }</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">♻️</span> <span class="string">狮城自动</span>, <span class="attr">type:</span> <span class="string">url-test</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">tolerance:</span> <span class="number">20</span>, <span class="attr">interval:</span> <span class="number">300</span>, <span class="attr">filter:</span> <span class="string">"(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|韩|日|美)).)*$"</span> }</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">♻️</span> <span class="string">美国自动</span>, <span class="attr">type:</span> <span class="string">url-test</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">tolerance:</span> <span class="number">20</span>, <span class="attr">interval:</span> <span class="number">300</span>, <span class="attr">filter:</span> <span class="string">"(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"</span>}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">♻️</span> <span class="string">自动选择</span>, <span class="attr">type:</span> <span class="string">url-test</span>, <span class="attr">include-all:</span> <span class="literal">true</span>, <span class="attr">tolerance:</span> <span class="number">20</span>, <span class="attr">interval:</span> <span class="number">300</span>, <span class="attr">filter:</span> <span class="string">"^((?!(直连)).)*$"</span>}</span><br><span class="line">  <span class="bullet">-</span> {<span class="attr">name:</span> <span class="string">🌐</span> <span class="string">全部节点</span>, <span class="attr">type:</span> <span class="string">select</span>, <span class="attr">include-all:</span> <span class="literal">true</span>}</span><br><span class="line"></span><br><span class="line"><span class="attr">rules:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,qichiyu.com,🚀</span> <span class="string">默认代理</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,private_domain,直连</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,apple_domain,🍎</span> <span class="string">Apple</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,proxylite,🚀</span> <span class="string">默认代理</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,ai,🤖</span> <span class="string">ChatGPT</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,github_domain,👨🏿‍💻</span> <span class="string">GitHub</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,youtube_domain,📹</span> <span class="string">YouTube</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,google_domain,🍀</span> <span class="string">Google</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,onedrive_domain,🐬</span> <span class="string">OneDrive</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,microsoft_domain,🪟</span> <span class="string">Microsoft</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,tiktok_domain,🎵</span> <span class="string">TikTok</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,speedtest_domain,✈️</span> <span class="string">Speedtest</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,telegram_domain,📲</span> <span class="string">Telegram</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,netflix_domain,🎥</span> <span class="string">NETFLIX</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,paypal_domain,💶</span> <span class="string">PayPal</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,gfw_domain,🚀</span> <span class="string">默认代理</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,geolocation-!cn,🚀</span> <span class="string">默认代理</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,cn_domain,🎯</span> <span class="string">直连</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,google_ip,🍀</span> <span class="string">Google,no-resolve</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,netflix_ip,🎥</span> <span class="string">NETFLIX,no-resolve</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,telegram_ip,📲</span> <span class="string">Telegram,no-resolve</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">RULE-SET,cn_ip,🎯</span> <span class="string">直连</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">MATCH,🐟</span> <span class="string">漏网之鱼</span></span><br><span class="line"></span><br><span class="line"><span class="attr">rule-anchor:</span></span><br><span class="line">  <span class="attr">ip:</span> <span class="string">&amp;ip</span> {<span class="attr">type:</span> <span class="string">http</span>, <span class="attr">interval:</span> <span class="number">86400</span>, <span class="attr">behavior:</span> <span class="string">ipcidr</span>, <span class="attr">format:</span> <span class="string">mrs</span>}</span><br><span class="line">  <span class="attr">domain:</span> <span class="string">&amp;domain</span> {<span class="attr">type:</span> <span class="string">http</span>, <span class="attr">interval:</span> <span class="number">86400</span>, <span class="attr">behavior:</span> <span class="string">domain</span>, <span class="attr">format:</span> <span class="string">mrs</span>}</span><br><span class="line">  <span class="attr">class:</span> <span class="string">&amp;class</span> {<span class="attr">type:</span> <span class="string">http</span>, <span class="attr">interval:</span> <span class="number">86400</span>, <span class="attr">behavior:</span> <span class="string">classical</span>, <span class="attr">format:</span> <span class="string">text</span>}</span><br><span class="line"><span class="attr">rule-providers:</span> </span><br><span class="line">  <span class="attr">private_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"</span>}</span><br><span class="line">  <span class="attr">proxylite:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*class</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"</span>}</span><br><span class="line">  <span class="attr">ai:</span> {  <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs"</span> }</span><br><span class="line">  <span class="attr">youtube_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"</span>}</span><br><span class="line">  <span class="attr">google_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"</span>}</span><br><span class="line">  <span class="attr">github_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"</span>}</span><br><span class="line">  <span class="attr">telegram_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"</span>}</span><br><span class="line">  <span class="attr">netflix_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"</span>}</span><br><span class="line">  <span class="attr">paypal_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs"</span>}</span><br><span class="line">  <span class="attr">onedrive_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"</span>}</span><br><span class="line">  <span class="attr">microsoft_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"</span>}</span><br><span class="line">  <span class="attr">apple_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs"</span>}</span><br><span class="line">  <span class="attr">speedtest_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs"</span>}</span><br><span class="line">  <span class="attr">tiktok_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"</span>}</span><br><span class="line">  <span class="attr">gfw_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs"</span>}</span><br><span class="line">  <span class="string">geolocation-!cn:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"</span>}</span><br><span class="line">  <span class="attr">cn_domain:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*domain</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"</span>}</span><br><span class="line">  </span><br><span class="line">  <span class="attr">cn_ip:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*ip</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"</span>}</span><br><span class="line">  <span class="attr">google_ip:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*ip</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"</span>}</span><br><span class="line">  <span class="attr">telegram_ip:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*ip</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"</span>}</span><br><span class="line">  <span class="attr">netflix_ip:</span> { <span class="string">&lt;&lt;:</span> <span class="string">*ip</span>, <span class="attr">url:</span> <span class="string">"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"</span>}</span><br></pre></td></tr></table></figure>
+<h3 id="以上yaml文件需要修改以下2个地方"><a class="markdownIt-Anchor" href="#以上yaml文件需要修改以下2个地方"></a> 以上yaml文件需要修改以下2个地方：</h3>
+<ul>
+<li>
+<h4 id="修改自己的订阅链接"><a class="markdownIt-Anchor" href="#修改自己的订阅链接"></a> <strong>修改自己的订阅链接</strong></h4>
+</li>
+<li>
+<h4 id="使用运营商提供的dns"><a class="markdownIt-Anchor" href="#使用运营商提供的dns"></a> <strong>使用运营商提供的DNS</strong></h4>
+<p>nameserver:</p>
+</li>
+</ul>
+<p>​      - 218.2.2.2</p>
+<p>​      - 218.4.4.4</p>
+<ul>
+<li>
+<hr>
+<p>修改完后需要重启<code>mihomo</code>容器</p>
+</li>
+</ul>
+<h3 id="进入web-ui"><a class="markdownIt-Anchor" href="#进入web-ui"></a> 进入Web UI</h3>
+<p>安装完毕后访问Web UI<code>http://NASIP:226</code>，后端地址填入：<code>http://NASIP:9090</code>，密匙为空。(需要在局域网内才能填入)</p>
+<p><img lazyload="" alt="image-20250824144128729" data-src="C:%5CUsers%5Cnj030672%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20250824144128729.png"></p>
+<h3 id="设置语言及代理端口"><a class="markdownIt-Anchor" href="#设置语言及代理端口"></a> 设置语言及代理端口</h3>
+<p><img lazyload="" alt="image-20250824144518156" data-src="C:%5CUsers%5Cnj030672%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20250824144518156.png"></p>
+<h3 id="食用方法"><a class="markdownIt-Anchor" href="#食用方法"></a> 食用方法</h3>
+<p>代理地址：<code>http://NASIP:7890</code></p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/docker/">docker</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%AF%BC%E8%88%AA/">导航</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%AE%9E%E7%94%A8/">实用</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2025/01/03/CloudDrive2%E9%83%A8%E7%BD%B2/"
+                                   title="CloudDrive2"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">CloudDrive2</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#docker%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%90%8D%E7%A7%B0"><span class="nav-number">1.</span> <span class="nav-text"> docker部署项目名称</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AFcli%E9%83%A8%E7%BD%B2%E9%9C%80%E8%A6%81%E5%88%86%E5%BC%80%E9%83%A8%E7%BD%B22%E4%B8%AA%E5%AE%B9%E5%99%A8"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可（cli部署需要分开部署2个容器）。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E4%BF%AE%E6%94%B9%E9%83%A8%E5%88%86%E5%A6%82%E4%B8%8B"><span class="nav-number">1.2.</span> <span class="nav-text"> 指令修改部分如下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mihomo%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E5%90%8E%E4%BF%AE%E6%94%B9mihomo%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84configyaml%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.1.</span> <span class="nav-text"> mihomo容器运行后，修改mihomo目录下的config.yaml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5%E4%B8%8Ayaml%E6%96%87%E4%BB%B6%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E4%BB%A5%E4%B8%8B2%E4%B8%AA%E5%9C%B0%E6%96%B9"><span class="nav-number">1.2.2.</span> <span class="nav-text"> 以上yaml文件需要修改以下2个地方：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%87%AA%E5%B7%B1%E7%9A%84%E8%AE%A2%E9%98%85%E9%93%BE%E6%8E%A5"><span class="nav-number">1.2.2.1.</span> <span class="nav-text"> 修改自己的订阅链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%BF%90%E8%90%A5%E5%95%86%E6%8F%90%E4%BE%9B%E7%9A%84dns"><span class="nav-number">1.2.2.2.</span> <span class="nav-text"> 使用运营商提供的DNS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5web-ui"><span class="nav-number">1.2.3.</span> <span class="nav-text"> 进入Web UI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80%E5%8F%8A%E4%BB%A3%E7%90%86%E7%AB%AF%E5%8F%A3"><span class="nav-number">1.2.4.</span> <span class="nav-text"> 设置语言及代理端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.5.</span> <span class="nav-text"> 食用方法</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2025
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">zoyo</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+        
+        <div class="deploy-info info-item">
+            
+            本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/brands/github.png"></span> 提供部署服务
+            
+        </div>
+    
+
+    
+        <div class="count-info info-item">
+            
+                <span class="count-item border-box word">
+                    <span class="item-type border-box">总字数</span>
+                    <span class="item-value border-box word">5.8k</span>
+                </span>
+            
+
+            
+                <span class="count-item border-box uv">
+                    <span class="item-type border-box">访客数</span>
+                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
+                </span>
+            
+
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#docker%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%90%8D%E7%A7%B0"><span class="nav-number">1.</span> <span class="nav-text"> docker部署项目名称</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AFcli%E9%83%A8%E7%BD%B2%E9%9C%80%E8%A6%81%E5%88%86%E5%BC%80%E9%83%A8%E7%BD%B22%E4%B8%AA%E5%AE%B9%E5%99%A8"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可（cli部署需要分开部署2个容器）。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E4%BB%A4%E4%BF%AE%E6%94%B9%E9%83%A8%E5%88%86%E5%A6%82%E4%B8%8B"><span class="nav-number">1.2.</span> <span class="nav-text"> 指令修改部分如下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mihomo%E5%AE%B9%E5%99%A8%E8%BF%90%E8%A1%8C%E5%90%8E%E4%BF%AE%E6%94%B9mihomo%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84configyaml%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.1.</span> <span class="nav-text"> mihomo容器运行后，修改mihomo目录下的config.yaml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5%E4%B8%8Ayaml%E6%96%87%E4%BB%B6%E9%9C%80%E8%A6%81%E4%BF%AE%E6%94%B9%E4%BB%A5%E4%B8%8B2%E4%B8%AA%E5%9C%B0%E6%96%B9"><span class="nav-number">1.2.2.</span> <span class="nav-text"> 以上yaml文件需要修改以下2个地方：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E8%87%AA%E5%B7%B1%E7%9A%84%E8%AE%A2%E9%98%85%E9%93%BE%E6%8E%A5"><span class="nav-number">1.2.2.1.</span> <span class="nav-text"> 修改自己的订阅链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%BF%90%E8%90%A5%E5%95%86%E6%8F%90%E4%BE%9B%E7%9A%84dns"><span class="nav-number">1.2.2.2.</span> <span class="nav-text"> 使用运营商提供的DNS</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5web-ui"><span class="nav-number">1.2.3.</span> <span class="nav-text"> 进入Web UI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80%E5%8F%8A%E4%BB%A3%E7%90%86%E7%AB%AF%E5%8F%A3"><span class="nav-number">1.2.4.</span> <span class="nav-text"> 设置语言及代理端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.5.</span> <span class="nav-text"> 食用方法</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="pjax">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+    
+<script src="//cdn.jsdelivr.net/npm/mermaid@10.5.0/dist/mermaid.min.js"></script>
+
+    <script data-pjax>
+      if (window.mermaid) {
+        mermaid.init()
+      }
+    </script>
+
+
+
+
+
+
+<!-- pjax -->
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

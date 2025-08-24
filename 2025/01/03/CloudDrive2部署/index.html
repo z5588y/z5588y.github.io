@@ -529,13 +529,13 @@ mjx-container[display="true"] + br {
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/docker/">docker</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%99%E7%A8%8B/">教程</a></li>
-                        
-                    
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%BD%91%E7%9B%98/">网盘</a></li>
                         
                     
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%BD%B1%E8%A7%86%E5%BA%93/">影视库</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%99%E7%A8%8B/">教程</a></li>
                         
                     
                 </ul>
@@ -571,8 +571,8 @@ mjx-container[display="true"] + br {
                          <h1 id="clouddrive2"><a class="markdownIt-Anchor" href="#clouddrive2"></a> CloudDrive2</h1>
 <p><strong>可以把各大网盘挂载到本地，搭建影音库等</strong></p>
 <h2 id="部署方式如下选择其一就可"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可"></a> <strong>部署方式如下，选择其一就可。</strong></h2>
-<div class="keep-tabs" id="keep-tabs-1756045926446">
-            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756045926446-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756045926446-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756045926446-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">    --name clouddrive \</span><br><span class="line">    --restart unless-stopped \</span><br><span class="line">    --env CLOUDDRIVE_HOME=/Config \</span><br><span class="line">    -v &lt;path to accept cloud mounts&gt;:/CloudNAS:shared \</span><br><span class="line">    -v &lt;path to app data&gt;:/Config \</span><br><span class="line">    -v &lt;other local shared path&gt;:/media:shared \</span><br><span class="line">    --network host \</span><br><span class="line">    --pid host \</span><br><span class="line">    --privileged \</span><br><span class="line">    --device /dev/fuse:/dev/fuse \</span><br><span class="line">    cloudnas/clouddrive2</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756045926446-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">version: "2.1"</span><br><span class="line">services:</span><br><span class="line">  cloudnas:</span><br><span class="line">    image: cloudnas/clouddrive2</span><br><span class="line">    container_name: clouddrive2</span><br><span class="line">    environment:</span><br><span class="line">      - TZ=Asia/Shanghai</span><br><span class="line">      - CLOUDDRIVE_HOME=/Config</span><br><span class="line">    volumes:</span><br><span class="line">      - &lt;path to accept cloud mounts&gt;:/CloudNAS:shared</span><br><span class="line">      - &lt;path to app data&gt;:/Config</span><br><span class="line">      - &lt;other local shared path&gt;:/media:shared #主机的媒体路径</span><br><span class="line">    devices:</span><br><span class="line">      - /dev/fuse:/dev/fuse</span><br><span class="line">    restart: unless-stopped</span><br><span class="line">    pid: "host"</span><br><span class="line">    privileged: true</span><br><span class="line">    network_mode: "host"</span><br></pre></td></tr></table></figure></div></div>
+<div class="keep-tabs" id="keep-tabs-1756046297477">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756046297477-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756046297477-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756046297477-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">    --name clouddrive \</span><br><span class="line">    --restart unless-stopped \</span><br><span class="line">    --env CLOUDDRIVE_HOME=/Config \</span><br><span class="line">    -v &lt;path to accept cloud mounts&gt;:/CloudNAS:shared \</span><br><span class="line">    -v &lt;path to app data&gt;:/Config \</span><br><span class="line">    -v &lt;other local shared path&gt;:/media:shared \</span><br><span class="line">    --network host \</span><br><span class="line">    --pid host \</span><br><span class="line">    --privileged \</span><br><span class="line">    --device /dev/fuse:/dev/fuse \</span><br><span class="line">    cloudnas/clouddrive2</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756046297477-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">version: "2.1"</span><br><span class="line">services:</span><br><span class="line">  cloudnas:</span><br><span class="line">    image: cloudnas/clouddrive2</span><br><span class="line">    container_name: clouddrive2</span><br><span class="line">    environment:</span><br><span class="line">      - TZ=Asia/Shanghai</span><br><span class="line">      - CLOUDDRIVE_HOME=/Config</span><br><span class="line">    volumes:</span><br><span class="line">      - &lt;path to accept cloud mounts&gt;:/CloudNAS:shared</span><br><span class="line">      - &lt;path to app data&gt;:/Config</span><br><span class="line">      - &lt;other local shared path&gt;:/media:shared #主机的媒体路径</span><br><span class="line">    devices:</span><br><span class="line">      - /dev/fuse:/dev/fuse</span><br><span class="line">    restart: unless-stopped</span><br><span class="line">    pid: "host"</span><br><span class="line">    privileged: true</span><br><span class="line">    network_mode: "host"</span><br></pre></td></tr></table></figure></div></div>
           </div>
 <table>
 <thead>
@@ -631,15 +631,15 @@ mjx-container[display="true"] + br {
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
                                         <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%BD%91%E7%9B%98/">网盘</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
                                         <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%BD%B1%E8%A7%86%E5%BA%93/">影视库</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
                                     </li>
                                 
                             </ul>
@@ -658,14 +658,14 @@ mjx-container[display="true"] + br {
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2025/01/03/IYUU%E9%83%A8%E7%BD%B2/"
-                                   title="IYUU部署"
+                                   href="/2025/08/23/mihomo%E9%83%A8%E7%BD%B2/"
+                                   title="docker部署标本"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">IYUU部署</span>
+                                        <span class="post-nav-title-item text-ellipsis">docker部署标本</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -675,11 +675,11 @@ mjx-container[display="true"] + br {
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2025/01/03/OnaNav/"
-                                   title="OneNav"
+                                   href="/2025/01/03/IYUU%E9%83%A8%E7%BD%B2/"
+                                   title="IYUU部署"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">OneNav</span>
+                                        <span class="post-nav-title-item text-ellipsis">IYUU部署</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -749,7 +749,7 @@ mjx-container[display="true"] + br {
             
                 <span class="count-item border-box word">
                     <span class="item-type border-box">总字数</span>
-                    <span class="item-value border-box word">3.6k</span>
+                    <span class="item-value border-box word">5.8k</span>
                 </span>
             
 
