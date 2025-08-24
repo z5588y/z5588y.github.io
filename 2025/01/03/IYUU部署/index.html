@@ -529,13 +529,13 @@ mjx-container[display="true"] + br {
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/docker/">docker</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%99%E7%A8%8B/">教程</a></li>
-                        
-                    
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/PT/">PT</a></li>
                         
                     
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E8%BE%85%E7%A7%8D/">辅种</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%99%E7%A8%8B/">教程</a></li>
                         
                     
                 </ul>
@@ -577,8 +577,8 @@ mjx-container[display="true"] + br {
 <p><strong>你可以自定义本地目录</strong>​ <strong>​<code>/root/iyuu</code>​</strong>​<strong>和</strong>​ <strong>​<code>/root/data</code>​</strong></p>
 </blockquote>
 <h2 id="部署方式如下选择其一就可"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可"></a> <strong>部署方式如下，选择其一就可。</strong></h2>
-<div class="keep-tabs" id="keep-tabs-1736397836356">
-            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1736397836356-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1736397836356-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1736397836356-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -itd \</span><br><span class="line">    -v /root/iyuu:/iyuu \</span><br><span class="line">    -v /root/data:/data \</span><br><span class="line">    -p 8780:8780 \</span><br><span class="line">    --name IYUUPlus \</span><br><span class="line">    --restart=always \</span><br><span class="line">    iyuucn/iyuuplus-dev:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1736397836356-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">version: '3.8'  # 使用适当的Docker Compose文件版本</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  iyuuplus:</span><br><span class="line">    image: iyuucn/iyuuplus-dev:latest  # 指定要使用的镜像</span><br><span class="line">    container_name: IYUUPlus  # 设置容器的名称</span><br><span class="line">    restart: always  # 设置重启策略为总是重启</span><br><span class="line">    ports:</span><br><span class="line">      - "8780:8780"  # 端口映射</span><br><span class="line">    volumes:</span><br><span class="line">      - /root/iyuu:/iyuu  # 卷挂载，宿主机目录到容器目录</span><br><span class="line">      - /root/data:/data  # 卷挂载，宿主机目录到容器目录</span><br></pre></td></tr></table></figure></div></div>
+<div class="keep-tabs" id="keep-tabs-1756045926441">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756045926441-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756045926441-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756045926441-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -itd \</span><br><span class="line">    -v /root/iyuu:/iyuu \</span><br><span class="line">    -v /root/data:/data \</span><br><span class="line">    -p 8780:8780 \</span><br><span class="line">    --name IYUUPlus \</span><br><span class="line">    --restart=always \</span><br><span class="line">    iyuucn/iyuuplus-dev:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756045926441-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">version: '3.8'  # 使用适当的Docker Compose文件版本</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  iyuuplus:</span><br><span class="line">    image: iyuucn/iyuuplus-dev:latest  # 指定要使用的镜像</span><br><span class="line">    container_name: IYUUPlus  # 设置容器的名称</span><br><span class="line">    restart: always  # 设置重启策略为总是重启</span><br><span class="line">    ports:</span><br><span class="line">      - "8780:8780"  # 端口映射</span><br><span class="line">    volumes:</span><br><span class="line">      - /root/iyuu:/iyuu  # 卷挂载，宿主机目录到容器目录</span><br><span class="line">      - /root/data:/data  # 卷挂载，宿主机目录到容器目录</span><br></pre></td></tr></table></figure></div></div>
           </div>
 <table>
 <thead>
@@ -637,15 +637,15 @@ mjx-container[display="true"] + br {
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
-                                    </li>
-                                
-                                    <li class="tag-item border-box">
                                         <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/PT/">PT</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
                                         <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E8%BE%85%E7%A7%8D/">辅种</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
                                     </li>
                                 
                             </ul>
@@ -661,22 +661,22 @@ mjx-container[display="true"] + br {
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2025/01/03/%E6%80%9D%E6%BA%90%E7%AC%94%E8%AE%B0%E9%83%A8%E7%BD%B2/"
-                                   title="思源笔记"
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2025/01/03/CloudDrive2%E9%83%A8%E7%BD%B2/"
+                                   title="CloudDrive2"
                                 >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">思源笔记</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                        <span class="post-nav-title-item text-ellipsis">CloudDrive2</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
                                     </span>
                                 </a>
                             </div>
-                        
                         
                     </div>
                 
