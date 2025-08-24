@@ -532,10 +532,10 @@ mjx-container[display="true"] + br {
                             <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%AE%9E%E7%94%A8/">实用</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%96%87%E4%BB%B6/">文件</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%88%86%E4%BA%AB/">分享</a></li>
                         
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%88%86%E4%BA%AB/">分享</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%96%87%E4%BB%B6/">文件</a></li>
                         
                     
                 </ul>
@@ -570,8 +570,8 @@ mjx-container[display="true"] + br {
                     
                          <h1 id="zdir"><a class="markdownIt-Anchor" href="#zdir"></a> Zdir</h1>
 <h2 id="部署方式如下选择其一就可"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可"></a> <strong>部署方式如下，选择其一就可。</strong></h2>
-<div class="keep-tabs" id="keep-tabs-1756046639219">
-            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756046639219-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756046639219-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756046639219-1"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  docker run --privileged -d --name=<span class="string">"zdir"</span> \</span><br><span class="line">  -v /opt/zdir/data:/opt/zdir/data \</span><br><span class="line">  -v /data/public:/opt/zdir/data/public \</span><br><span class="line">  -v /data/private:/opt/zdir/data/private \</span><br><span class="line">  -p 6080:6080 \</span><br><span class="line">  --restart=always \</span><br><span class="line">  helloz/zdir:4</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756046639219-2"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">version: <span class="string">'3.3'</span></span><br><span class="line">services:</span><br><span class="line">    zdir:</span><br><span class="line">        container_name: zdir</span><br><span class="line">        privileged: <span class="literal">true</span></span><br><span class="line">        volumes:</span><br><span class="line">            - <span class="string">'/opt/zdir/data:/opt/zdir/data'</span></span><br><span class="line">            - <span class="string">'/data/public:/opt/zdir/data/public'</span></span><br><span class="line">            - <span class="string">'/data/private:/opt/zdir/data/private'</span></span><br><span class="line">        ports:</span><br><span class="line">            - <span class="string">'6080:6080'</span></span><br><span class="line">        restart: always</span><br><span class="line">        image: <span class="string">'helloz/zdir:4'</span></span><br></pre></td></tr></table></figure></div></div>
+<div class="keep-tabs" id="keep-tabs-1756046978429">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756046978429-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756046978429-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756046978429-1"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  docker run --privileged -d --name=<span class="string">"zdir"</span> \</span><br><span class="line">  -v /opt/zdir/data:/opt/zdir/data \</span><br><span class="line">  -v /data/public:/opt/zdir/data/public \</span><br><span class="line">  -v /data/private:/opt/zdir/data/private \</span><br><span class="line">  -p 6080:6080 \</span><br><span class="line">  --restart=always \</span><br><span class="line">  helloz/zdir:4</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756046978429-2"><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">version: <span class="string">'3.3'</span></span><br><span class="line">services:</span><br><span class="line">    zdir:</span><br><span class="line">        container_name: zdir</span><br><span class="line">        privileged: <span class="literal">true</span></span><br><span class="line">        volumes:</span><br><span class="line">            - <span class="string">'/opt/zdir/data:/opt/zdir/data'</span></span><br><span class="line">            - <span class="string">'/data/public:/opt/zdir/data/public'</span></span><br><span class="line">            - <span class="string">'/data/private:/opt/zdir/data/private'</span></span><br><span class="line">        ports:</span><br><span class="line">            - <span class="string">'6080:6080'</span></span><br><span class="line">        restart: always</span><br><span class="line">        image: <span class="string">'helloz/zdir:4'</span></span><br></pre></td></tr></table></figure></div></div>
           </div>
 <h2 id="指令修改部分如下"><a class="markdownIt-Anchor" href="#指令修改部分如下"></a> <strong>指令修改部分如下</strong></h2>
 <ul>
@@ -603,11 +603,11 @@ mjx-container[display="true"] + br {
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%96%87%E4%BB%B6/">文件</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%88%86%E4%BA%AB/">分享</a>
                                     </li>
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%88%86%E4%BA%AB/">分享</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%96%87%E4%BB%B6/">文件</a>
                                     </li>
                                 
                             </ul>
@@ -626,14 +626,14 @@ mjx-container[display="true"] + br {
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2025/01/03/CloudDrive2%E9%83%A8%E7%BD%B2/"
-                                   title="CloudDrive2"
+                                   href="/2025/01/03/lucky%E9%83%A8%E7%BD%B2/"
+                                   title="lucky部署"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">CloudDrive2</span>
+                                        <span class="post-nav-title-item text-ellipsis">lucky部署</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
