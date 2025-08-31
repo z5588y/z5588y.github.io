@@ -506,7 +506,7 @@ mjx-container[display="true"] + br {
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Sun Aug 31 2025 12:53:16 GMT+0800">2025-08-31 12:53:16</span>
+                    <span class="datetime" data-updated="Sun Aug 31 2025 12:58:37 GMT+0800">2025-08-31 12:58:37</span>
                 </span>
             
         
@@ -565,57 +565,22 @@ mjx-container[display="true"] + br {
                          <h1 id="dockports"><a class="markdownIt-Anchor" href="#dockports"></a> dockports</h1>
 <p><strong>可以查看NAS被使用的端口及查看对应端口部署的什么项目</strong></p>
 <h2 id="部署方式如下选择其一就可"><a class="markdownIt-Anchor" href="#部署方式如下选择其一就可"></a> <strong>部署方式如下，选择其一就可。</strong></h2>
-<div class="keep-tabs" id="keep-tabs-1756616044921">
-            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756616044921-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756616044921-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756616044921-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 使用自定义端口8080</span><br><span class="line">docker run -d \</span><br><span class="line">  --name dockports \</span><br><span class="line">  --network host \</span><br><span class="line">  -v /var/run/docker.sock:/var/run/docker.sock:ro \</span><br><span class="line">  -v ./config:/app/config \</span><br><span class="line">  -e DOCKPORTS_PORT=7577</span><br><span class="line">  ghcr.io/coracoo/dockports:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756616044921-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">version: '3.8'</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  dockports:</span><br><span class="line">    image: ghcr.io/coracoo/dockports:latest</span><br><span class="line">    container_name: dockports</span><br><span class="line">    network_mode: host</span><br><span class="line">    volumes:</span><br><span class="line">      - /var/run/docker.sock:/var/run/docker.sock:ro</span><br><span class="line">      - ./config:/app/config</span><br><span class="line">    environment:</span><br><span class="line">      - DOCKPORTS_PORT=7577</span><br><span class="line">    restart: unless-stopped	</span><br></pre></td></tr></table></figure></div></div>
+<div class="keep-tabs" id="keep-tabs-1756616339037">
+            <div class="tabs-nav"><div class="tab active" data-href="keep-tabs-1756616339037-1">docker cli 部署</div><div class="tab" data-href="keep-tabs-1756616339037-2">docker compose 部署</div></div><div class="tabs-content"><div class="tab-pane active" id="keep-tabs-1756616339037-1"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 使用自定义端口8080</span><br><span class="line">docker run -d \</span><br><span class="line">  --name dockports \</span><br><span class="line">  --network host \</span><br><span class="line">  -v /var/run/docker.sock:/var/run/docker.sock:ro \</span><br><span class="line">  -v ./config:/app/config \</span><br><span class="line">  -e DOCKPORTS_PORT=7577</span><br><span class="line">  ghcr.io/coracoo/dockports:latest</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="keep-tabs-1756616339037-2"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">version: '3.8'</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  dockports:</span><br><span class="line">    image: ghcr.io/coracoo/dockports:latest</span><br><span class="line">    container_name: dockports</span><br><span class="line">    network_mode: host</span><br><span class="line">    volumes:</span><br><span class="line">      - /var/run/docker.sock:/var/run/docker.sock:ro</span><br><span class="line">      - ./config:/app/config</span><br><span class="line">    environment:</span><br><span class="line">      - DOCKPORTS_PORT=7577</span><br><span class="line">    restart: unless-stopped	</span><br></pre></td></tr></table></figure></div></div>
           </div>
-<table>
-<thead>
-<tr>
-<th>docker命令解释</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>参数</td>
-<td>解释</td>
-</tr>
-<tr>
-<td>​<code>​--name</code>​</td>
-<td>容器名字</td>
-</tr>
-<tr>
-<td>​<code>​-v</code>​</td>
-<td>资源挂载到容器，冒号分隔 本地目录文件:容器目录文件</td>
-</tr>
-<tr>
-<td>​<code>​-p</code>​</td>
-<td>本地端口绑定到容器端口，冒号分隔 本地端口:容器端口</td>
-</tr>
-<tr>
-<td>​<code>​--net=host</code>​</td>
-<td>容器所使用的网络模式。</td>
-</tr>
-<tr>
-<td>​<code>​--restart</code>​</td>
-<td>启动模式</td>
-</tr>
-<tr>
-<td>​<code>ghcr.io/coracoo/dockports</code>​</td>
-<td>镜像名字，​</td>
-</tr>
-<tr>
-<td>​<code>/var/run/docker.sock</code>​</td>
-<td>docker默认位置此文件映射不要改​</td>
-</tr>
-<tr>
-<td>​<code>./config</code>​</td>
-<td>容器安装位置，自己修改​</td>
-</tr>
-</tbody>
-</table>
+<h2 id="docker命令解释"><a class="markdownIt-Anchor" href="#docker命令解释"></a> docker命令解释</h2>
+<p>| ------------------------------------| -----------------------------------------------------------|<br>
+|参数|解释|<br>
+|​<code>​--name</code>​|容器名字|<br>
+|​<code>​-v</code>​|资源挂载到容器，冒号分隔 本地目录文件:容器目录文件|<br>
+|​<code>​-p</code>​|本地端口绑定到容器端口，冒号分隔 本地端口:容器端口|<br>
+|​<code>​--net=host</code>​|容器所使用的网络模式。|<br>
+|​<code>​--restart</code>​|启动模式|<br>
+|​<code>ghcr.io/coracoo/dockports</code>​|镜像名字，​|<br>
+|​<code>/var/run/docker.sock</code>​|docker默认位置此文件映射不要改​|<br>
+|​<code>./config</code>​|容器安装位置，自己修改​|</p>
 <h2 id="初始化"><a class="markdownIt-Anchor" href="#初始化"></a> 初始化</h2>
-<div class="keep-note primary"><p><strong><code>启动后http://IP:7577访问即可</code></strong></p>
+<div class="keep-note primary"><p><strong>启动后<code>http://IP:7577</code>访问即可</strong></p>
 </div>
 <button onclick="window.open('https://github.com/z5588y/DockPorts')" class="keep-button color-success size-large">点击查看官方文档</button>
 
@@ -686,7 +651,7 @@ mjx-container[display="true"] + br {
             <div class="pc-post-toc left-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dockports"><span class="nav-number">1.</span> <span class="nav-text"> dockports</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text"> 初始化</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dockports"><span class="nav-number">1.</span> <span class="nav-text"> dockports</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#docker%E5%91%BD%E4%BB%A4%E8%A7%A3%E9%87%8A"><span class="nav-number">1.2.</span> <span class="nav-text"> docker命令解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.3.</span> <span class="nav-text"> 初始化</span></a></li></ol></li></ol>
     </div>
 </div>
 
@@ -880,7 +845,7 @@ mjx-container[display="true"] + br {
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dockports"><span class="nav-number">1.</span> <span class="nav-text"> dockports</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text"> 初始化</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dockports"><span class="nav-number">1.</span> <span class="nav-text"> dockports</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E5%A6%82%E4%B8%8B%E9%80%89%E6%8B%A9%E5%85%B6%E4%B8%80%E5%B0%B1%E5%8F%AF"><span class="nav-number">1.1.</span> <span class="nav-text"> 部署方式如下，选择其一就可。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#docker%E5%91%BD%E4%BB%A4%E8%A7%A3%E9%87%8A"><span class="nav-number">1.2.</span> <span class="nav-text"> docker命令解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.3.</span> <span class="nav-text"> 初始化</span></a></li></ol></li></ol>
     </div>
 </div>
 
