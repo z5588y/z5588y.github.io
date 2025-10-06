@@ -9,8 +9,6 @@
     
     <title>
         
-            标签: 端口 |
-        
         zoyo
     </title>
     
@@ -109,7 +107,7 @@
                         </li>
                     
                         
-                        <li class="menu-item flex-start border-box active">
+                        <li class="menu-item flex-start border-box">
                             <a class="menu-text-color border-box" href="/tags">
                                 
                                     <i class="menu-text-color menu-icon fa-solid fa-tags"></i>
@@ -234,7 +232,7 @@
                 </li>
             
                 
-                <li class="drawer-menu-item border-box not-sub-menu active">
+                <li class="drawer-menu-item border-box not-sub-menu">
                     <label class="drawer-menu-label border-box">
                         <a class="drawer-menu-text-color left-side flex-start border-box" href="/tags">
                             
@@ -344,39 +342,260 @@
             <div class="main-content border-box">
                 
 
-                    <div class="fade-in-down-animation">
-    <div class="tag-archive-container border-box">
-        <div class="tag-name"><i class="fas fa-hashtag"></i>&nbsp;端口
-        </div>
-        <div class="tag-post-list">
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
             
-<div class="archive-list-container border-box">
-    
-        <section class="archive-item border-box">
-            <div class="archive-item-header border-box">
-                <span class="archive-year">2025</span>
-            </div>
-            <ul class="archive-item-body border-box">
+
+            <div class="post-content-bottom border-box">
                 
-                    <li class="post-item border-box">
-                        <span class="starting-point border-box flex-center"></span>
-                        <span class="post-date border-box">08-31</span>
-                        <a class="post-title border-box text-ellipsis"
-                           href="/2025/08/31/%E6%9F%A5%E7%9C%8Bdocker%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AB%AF%E5%8F%A3/"
-                        >查看docker项目使用的端口</a>
-                    </li>
+                    <div class="post-title">
+                        
+                    </div>
                 
-            </ul>
-        </section>
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">zoyo</span>
+                                
+                                    <span class="author-badge">结丹</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2025-10-07 00:12:56</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Tue Oct 07 2025 00:17:18 GMT+0800">2025-10-07 00:17:18</span>
+                </span>
+            
+        
+
+        
+
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.1k 字</span>
+            </span>
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
     
 </div>
 
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <p>title: “CertD自签泛域名证书”<br />
+date: 2025-10-07 00:16:36<br />
+tags:</p>
+<ul>
+<li>docker</li>
+<li>SSL</li>
+<li>证书</li>
+<li>实用<br />
+categories:</li>
+<li>娱乐<br />
+author: zoyo<br />
+avatar: /images/photos/img-3.png<br />
+code_block_shrink:  false<br />
+mathjax: true<br />
+home_cover: /images/photos/img-2.png<br />
+home_cover_height: 120<br />
+post_cover: /images/photos/img-4.png<br />
+post_cover_height: 400</li>
+</ul>
+<h1 id="自签泛域名证书"><a class="markdownIt-Anchor" href="#自签泛域名证书"></a> 自签泛域名证书</h1>
+<h2 id="使用docker快速部署certd并自动申请免费泛域名ssl证书"><a class="markdownIt-Anchor" href="#使用docker快速部署certd并自动申请免费泛域名ssl证书"></a> <a class="link"   target="_blank" rel="noopener" href="https://blog.xiaoz.org/archives/21203" >使用Docker快速部署CertD并自动申请免费泛域名SSL证书<i class="fas fa-external-link-alt"></i></a></h2>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img.rss.ink/imgs/2024/08/08/592671e74202665e.png"
+                        alt="592671e74202665e.png" 
+                 ></p>
+<h3 id="certd特点"><a class="markdownIt-Anchor" href="#certd特点"></a> CertD特点</h3>
+<ul>
+<li>全自动申请证书（支持阿里云、腾讯云、华为云、Cloudflare等各种途径注册的域名）</li>
+<li>全自动部署更新证书（目前支持部署到主机、部署到阿里云、腾讯云等）</li>
+<li>支持通配符域名/泛域名，支持多个域名打到一个证书上</li>
+<li>邮件通知</li>
+<li>提供私有化部署，保障安全</li>
+<li>免费</li>
+</ul>
+<h3 id="docker部署certd"><a class="markdownIt-Anchor" href="#docker部署certd"></a> Docker部署CertD</h3>
+<p>接下来博主将使用docker compose工具私有部署CertD，如果您对此并不熟悉，需要先去学习了解。</p>
+<p>新建一个<code>docker-compose.yaml</code>文件，内容如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">certd:</span></span><br><span class="line">    <span class="comment"># 镜像                                                  #  ↓↓↓↓↓ --- 1、 镜像版本号，建议改成固定版本号【可选】</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">registry.cn-shenzhen.aliyuncs.com/handsfree/certd:latest</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">certd</span> <span class="comment"># 容器名</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span> <span class="comment"># 自动重启</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="comment">#   ↓↓↓↓↓ ------------------------------------------------------- 2、 数据库以及证书存储路径,默认存在宿主机的/data/certd/目录下【可选】</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/app/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./ssl:/data/ssl</span></span><br><span class="line">    <span class="attr">ports:</span> <span class="comment"># 端口映射</span></span><br><span class="line">      <span class="comment">#  ↓↓↓↓ ----------------------------------------------------------3、如果端口有冲突，可以修改第一个7001为其他不冲突的端口号【可选】</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;7001:7001&quot;</span></span><br><span class="line">    <span class="attr">dns:</span></span><br><span class="line">      <span class="comment"># 如果出现getaddrinfo ENOTFOUND等错误，可以尝试修改或注释dns配置</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">223.5</span><span class="number">.5</span><span class="number">.5</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">223.6</span><span class="number">.6</span><span class="number">.6</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8.8</span><span class="number">.8</span><span class="number">.8</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8.8</span><span class="number">.4</span><span class="number">.4</span></span><br><span class="line">    <span class="attr">environment:</span> <span class="comment"># 环境变量</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">certd_system_resetAdminPassword=false</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">certd_cron_immediateTriggerOnce=false</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">VITE_APP_ICP_NO=</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>1.23.1</code>：为CertD版本号，你也可以修改为<code>latest</code></li>
+<li><code>./data</code>：本机挂载目录，用于持久化保存CertD数据，您可以修改为绝对路径</li>
+<li><code>./ssl</code>：用于导出SSL的证书目录，这个是博主自己添加的</li>
+</ul>
+<p>然后使用命令<code>docker-compose up -d</code>启动容器，然后输入<code>http://your_server_ip:7001</code>进行访问，默认账号密码：<code>admin/123456</code>，登录后务必修改。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img.rss.ink/imgs/2024/08/08/88de85fed55b1f31.png"
+                        alt="88de85fed55b1f31.png" 
+                 ></p>
+<h3 id="基本使用"><a class="markdownIt-Anchor" href="#基本使用"></a> 基本使用</h3>
+<p>CertD的自动化流程如下截图所示。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img.rss.ink/imgs/2024/08/08/2d77b939fd58b991.png"
+                        alt="2d77b939fd58b991.png" 
+                 ></p>
+<p>我们需要先在<strong>授权管理</strong>，添加DNS授权，目前支持<strong>DNSPOD、腾讯、阿里云、华为云、CloudFlare</strong>等主流厂商DNS接入。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img.rss.ink/imgs/2024/08/08/904b28a449e72a21.png"
+                        alt="904b28a449e72a21.png" 
+                 ></p>
+<blockquote>
+<p>你域名使用的哪个厂商的DNS就选择哪个厂商进行接入！</p>
+</blockquote>
+<p>接下来添加<strong>证书自动化流水线</strong>，根据自己的情况填写域名和邮箱等必填信息。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img.rss.ink/imgs/2024/08/08/3380f686d9ab4b51.png"
+                        alt="3380f686d9ab4b51.png" 
+                 ></p>
+<ul>
+<li>域名：如果需要泛域名证书可填写<code>*.xxx.com</code>，回车键还可以添加多个域名，Let’s Encrypt是支持泛域名和多域名的，前提是这些域名使用的同一家DNS</li>
+<li>证书提供商：默认选择Let’s Encrypt就行了</li>
+<li>DNS提供商：你域名用的哪家服务商就选哪个</li>
+<li>定时触发建议填写，这样后期可以自动续期，比如填写：<code>0 0 4 * * *</code>代表每天凌晨4点检测一次</li>
+</ul>
+<p>添加完毕后，如果你需要立即申请SSL证书，手动点一下<strong>手动触发</strong>就行了，配置正确的情况下，一般几分钟就申请下来了。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img.rss.ink/imgs/2024/08/08/dfb881720c9efa98.png"
+                        alt="dfb881720c9efa98.png" 
+                 ></p>
+<p>申请完毕后点击下载按钮，可以将SSL证书下载到本地。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img.rss.ink/imgs/2024/08/08/3efa97ee1b4a557a.png"
+                        alt="3efa97ee1b4a557a.png" 
+                 ></p>
+<p>同时你还可以手动添加更多步骤，比如将证书自动导出，或者将证书上传到阿里云、腾讯云等，自动化程度还是挺高的，就是支持的厂商目前还比较少。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://img.rss.ink/imgs/2024/08/08/52abe1831a270de0.png"
+                        alt="52abe1831a270de0.png" 
+                 ></p>
+<h3 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项"></a> 注意事项</h3>
+<p>xiaoz在申请过程中，遇到了申请失败的情况，原因是在申请之前，我的域名DNS存在名为<code>_acme-challenge</code>的主机记录，和Let’s Encrypt要求的主机名存在冲突，所以在申请前最好先把已有的<code>_acme-challenge</code>主机记录删除。</p>
+<p>另外作者并没有把CertD的镜像推送到Docker Hub，所以必须使用上面作者给出的阿里云镜像地址，否则无法拉取。</p>
+<h3 id="结语"><a class="markdownIt-Anchor" href="#结语"></a> 结语</h3>
+<p>CertD较为专业，不太适合新手小白，但比较适合运维和开发人员，其自动化证书管理流程能显著提高运维和开发人员的工作效率。当前，CertD支持的服务商数量有限，期待未来能扩展到更多平台。同时，也感谢作者的辛苦付出。</p>
+<blockquote>
+<p>CertD开源地址：<a class="link"   target="_blank" rel="noopener" href="https://github.com/certd/certd" >https://github.com/certd/certd<i class="fas fa-external-link-alt"></i></a></p>
+<p>文档地址：<a class="link"   target="_blank" rel="noopener" href="https://certd.docmirror.cn/guide/install/upgrade.html" >https://certd.docmirror.cn/guide/install/upgrade.html<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2025/09/26/8800%E6%9C%89%E6%97%A0%E5%88%9A%E5%98%B4%E8%AF%86%E5%88%AB%E5%8E%9F%E7%90%86/"
+                                   title="8800有无刚嘴识别原理"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">8800有无刚嘴识别原理</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
         </div>
+
+        
+            <div class="pc-post-toc left-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E7%AD%BE%E6%B3%9B%E5%9F%9F%E5%90%8D%E8%AF%81%E4%B9%A6"><span class="nav-number">1.</span> <span class="nav-text"> 自签泛域名证书</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8docker%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2certd%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%94%B3%E8%AF%B7%E5%85%8D%E8%B4%B9%E6%B3%9B%E5%9F%9F%E5%90%8Dssl%E8%AF%81%E4%B9%A6"><span class="nav-number">1.1.</span> <span class="nav-text"> 使用Docker快速部署CertD并自动申请免费泛域名SSL证书</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#certd%E7%89%B9%E7%82%B9"><span class="nav-number">1.1.1.</span> <span class="nav-text"> CertD特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docker%E9%83%A8%E7%BD%B2certd"><span class="nav-number">1.1.2.</span> <span class="nav-text"> Docker部署CertD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.3.</span> <span class="nav-text"> 基本使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.1.4.</span> <span class="nav-text"> 注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">1.1.5.</span> <span class="nav-text"> 结语</span></a></li></ol></li></ol></li></ol>
     </div>
-    
+</div>
 
-
-
+            </div>
+        
+    </div>
 </div>
 
 
@@ -435,6 +654,31 @@
 
     <!-- post tools -->
     
+        <div class="post-tools left-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
 
     <!-- side tools -->
     <div class="side-tools">
@@ -474,6 +718,10 @@
     </ul>
 
     <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
         
 
         
@@ -531,8 +779,18 @@
 
     <!-- tablet toc -->
     
-</main>
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E7%AD%BE%E6%B3%9B%E5%9F%9F%E5%90%8D%E8%AF%81%E4%B9%A6"><span class="nav-number">1.</span> <span class="nav-text"> 自签泛域名证书</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8docker%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2certd%E5%B9%B6%E8%87%AA%E5%8A%A8%E7%94%B3%E8%AF%B7%E5%85%8D%E8%B4%B9%E6%B3%9B%E5%9F%9F%E5%90%8Dssl%E8%AF%81%E4%B9%A6"><span class="nav-number">1.1.</span> <span class="nav-text"> 使用Docker快速部署CertD并自动申请免费泛域名SSL证书</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#certd%E7%89%B9%E7%82%B9"><span class="nav-number">1.1.1.</span> <span class="nav-text"> CertD特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docker%E9%83%A8%E7%BD%B2certd"><span class="nav-number">1.1.2.</span> <span class="nav-text"> Docker部署CertD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.3.</span> <span class="nav-text"> 基本使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.1.4.</span> <span class="nav-text"> 注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AF%AD"><span class="nav-number">1.1.5.</span> <span class="nav-text"> 结语</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
 
+            </div>
+        </div>
+    
+</main>
 
 
 
@@ -574,6 +832,24 @@
     
 
     <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
     
 
     <!-- categories page -->
